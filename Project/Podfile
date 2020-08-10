@@ -6,6 +6,8 @@ workspace 'iddog'
 
 target 'Application' do
   project 'Application/Application.xcodeproj/'
+  
+  pod 'SwiftGen', '~> 6.0'
 
   target 'ApplicationTests' do
     inherit! :search_paths

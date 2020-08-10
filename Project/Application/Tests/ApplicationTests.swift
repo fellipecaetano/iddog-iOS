@@ -1,14 +1,5 @@
-//
-//  ApplicationTests.swift
-//  ApplicationTests
-//
-//  Created by fellipe caetano on 10/08/20.
-//  Copyright © 2020 Fellipe Caetano. All rights reserved.
-//
-
 import XCTest
-
-@testable import Application
+@testable import iddog
 
 class ApplicationTests: XCTestCase {
 
