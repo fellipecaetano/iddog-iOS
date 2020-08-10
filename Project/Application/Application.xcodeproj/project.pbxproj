@@ -14,6 +14,8 @@
 		A382C5C624E1C07F009EF2F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A382C5C424E1C07F009EF2F8 /* LaunchScreen.storyboard */; };
 		A382C5D124E1C07F009EF2F8 /* ApplicationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A382C5D024E1C07F009EF2F8 /* ApplicationTests.swift */; };
 		A382C5DC24E1D576009EF2F8 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A382C5DB24E1D576009EF2F8 /* SignInView.swift */; };
+		A382C5E024E1E961009EF2F8 /* Application.strings in Resources */ = {isa = PBXBuildFile; fileRef = A382C5DF24E1E961009EF2F8 /* Application.strings */; };
+		A382C5E324E1EBE9009EF2F8 /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = A382C5E224E1EBE8009EF2F8 /* Strings+Generated.swift */; };
 		E0576717116519E922E27288 /* Pods_Application.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9100A121CF07C8907AB9B43D /* Pods_Application.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +46,8 @@
 		A382C5D024E1C07F009EF2F8 /* ApplicationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationTests.swift; sourceTree = "<group>"; };
 		A382C5D224E1C07F009EF2F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A382C5DB24E1D576009EF2F8 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		A382C5DF24E1E961009EF2F8 /* Application.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Application.strings; sourceTree = "<group>"; };
+		A382C5E224E1EBE8009EF2F8 /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,7 @@
 		A382C5B824E1C07E009EF2F8 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				A382C5E224E1EBE8009EF2F8 /* Strings+Generated.swift */,
 				A382C5B924E1C07E009EF2F8 /* AppDelegate.swift */,
 				A382C5BD24E1C07E009EF2F8 /* SignInViewController.swift */,
 				A382C5C224E1C07F009EF2F8 /* Assets.xcassets */,
@@ -112,8 +117,17 @@
 		A382C5DE24E1E689009EF2F8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A382C5E124E1E976009EF2F8 /* Strings */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		A382C5E124E1E976009EF2F8 /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				A382C5DF24E1E961009EF2F8 /* Application.strings */,
+			);
+			path = Strings;
 			sourceTree = "<group>";
 		};
 		CFFF7635A125201DEC2FD842 /* Frameworks */ = {
@@ -222,6 +236,7 @@
 			files = (
 				A382C5C624E1C07F009EF2F8 /* LaunchScreen.storyboard in Resources */,
 				A382C5C324E1C07F009EF2F8 /* Assets.xcassets in Resources */,
+				A382C5E024E1E961009EF2F8 /* Application.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +303,7 @@
 			files = (
 				A382C5BE24E1C07E009EF2F8 /* SignInViewController.swift in Sources */,
 				A382C5BA24E1C07E009EF2F8 /* AppDelegate.swift in Sources */,
+				A382C5E324E1EBE9009EF2F8 /* Strings+Generated.swift in Sources */,
 				A382C5DC24E1D576009EF2F8 /* SignInView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -3,7 +3,7 @@ import UIKit
 final class SignInView: UIView {
     private let emailTextField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = "E-mail"
+        textField.placeholder = L10n.email
         textField.keyboardType = .emailAddress
         textField.autocapitalizationType = .none
 
@@ -16,7 +16,7 @@ final class SignInView: UIView {
 
     private let signInButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("Entrar", for: [])
+        button.setTitle(L10n.signIn, for: [])
         return button
     }()
 
