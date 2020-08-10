@@ -7,6 +7,7 @@
 //
 
 import XCTest
+
 @testable import Application
 
 class ApplicationTests: XCTestCase {

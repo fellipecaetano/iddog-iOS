@@ -6,20 +6,20 @@ final class SignInView: UIView {
         textField.placeholder = "E-mail"
         textField.keyboardType = .emailAddress
         textField.autocapitalizationType = .none
-        
+
         if #available(iOS 10.0, *) {
             textField.textContentType = .emailAddress
         }
-        
+
         return textField
     }()
-    
+
     private let signInButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("Entrar" , for: [])
+        button.setTitle("Entrar", for: [])
         return button
     }()
-    
+
     init() {
         super.init(frame: UIScreen.main.bounds)
         setUp()
@@ -28,38 +28,42 @@ final class SignInView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     private func setUp() {
         configure()
         createHierarchy()
         createConstraints()
     }
-    
+
     private func configure() {
         backgroundColor = .white
     }
-    
+
     private func createHierarchy() {
         addSubview(emailTextField)
         addSubview(signInButton)
     }
-    
+
     private func createConstraints() {
         // emailTextField
         emailTextField.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([
-            emailTextField.centerYAnchor.constraint(equalTo: centerYAnchor),
-            emailTextField.leadingAnchor.constraint(equalTo: layoutMarginsGuide.leadingAnchor),
-            emailTextField.trailingAnchor.constraint(equalTo: layoutMarginsGuide.trailingAnchor)
-        ])
-        
+
+        NSLayoutConstraint.activate(
+            [
+                emailTextField.centerYAnchor.constraint(equalTo: centerYAnchor),
+                emailTextField.leadingAnchor.constraint(equalTo: layoutMarginsGuide.leadingAnchor),
+                emailTextField.trailingAnchor.constraint(
+                    equalTo: layoutMarginsGuide.trailingAnchor),
+            ])
+
         // signInButton
         signInButton.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([
-            signInButton.centerXAnchor.constraint(equalTo: emailTextField.centerXAnchor),
-            signInButton.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: layoutMargins.bottom * 3)
-        ])
+
+        NSLayoutConstraint.activate(
+            [
+                signInButton.centerXAnchor.constraint(equalTo: emailTextField.centerXAnchor),
+                signInButton.topAnchor.constraint(
+                    equalTo: emailTextField.bottomAnchor, constant: layoutMargins.bottom * 3),
+            ])
     }
 }
