@@ -4,10 +4,12 @@ use_frameworks!
 
 workspace 'iddog'
 
+pod 'SwiftGen', '~> 6.0'
+
 target 'Application' do
   project 'Application/Application.xcodeproj/'
   
-  pod 'SwiftGen', '~> 6.0'
+  pod 'Alamofire', '~> 4.9'
 
   target 'ApplicationTests' do
     inherit! :search_paths

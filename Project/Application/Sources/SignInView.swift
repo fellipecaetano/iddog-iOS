@@ -1,7 +1,7 @@
 import UIKit
 
 final class SignInView: UIView {
-    private let emailTextField: UITextField = {
+    let emailTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = L10n.email
         textField.keyboardType = .emailAddress
@@ -14,7 +14,7 @@ final class SignInView: UIView {
         return textField
     }()
 
-    private let signInButton: UIButton = {
+    let signInButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle(L10n.signIn, for: [])
         return button
