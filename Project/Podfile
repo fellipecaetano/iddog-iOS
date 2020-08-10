@@ -1,0 +1,13 @@
+platform :ios, '9.0'
+
+use_frameworks!
+
+workspace 'iddog'
+
+target 'Application' do
+  project 'Application/Application.xcodeproj/'
+
+  target 'ApplicationTests' do
+    inherit! :search_paths
+  end
+end
