@@ -48,7 +48,8 @@ final class SignInView: UIView {
         // emailTextField
         emailTextField.translatesAutoresizingMaskIntoConstraints = false
 
-        NSLayoutConstraint.activate([
+        NSLayoutConstraint.activate(
+            [
                 emailTextField.centerYAnchor.constraint(equalTo: centerYAnchor),
                 emailTextField.leadingAnchor.constraint(equalTo: layoutMarginsGuide.leadingAnchor),
                 emailTextField.trailingAnchor.constraint(
