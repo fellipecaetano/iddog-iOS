@@ -4,4 +4,8 @@ public final class Disposable {
     public init(dispose: @escaping () -> Void) {
         self.dispose = dispose
     }
+    
+    public static var none: Disposable {
+        return Disposable {}
+    }
 }
