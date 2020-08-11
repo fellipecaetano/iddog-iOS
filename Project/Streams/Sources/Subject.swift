@@ -1,9 +1,13 @@
 public final class Subject<T> {
     private var subscribers: [UUID: (T) -> Void] = [:]
     
-    public func subscribe(_ handler: @escaping (T) -> Void) {
+    public func subscribe(_ handler: @escaping (T) -> Void) -> Disposable {
         let uuid = UUID()
         subscribers[uuid] = handler
+        
+        return Disposable { [weak self] in
+            self?.subscribers[uuid] = nil
+        }
     }
     
     public func emit(_ value: T) {
