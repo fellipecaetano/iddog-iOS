@@ -63,7 +63,7 @@ final class SignInView: UIView {
             [
                 signInButton.centerXAnchor.constraint(equalTo: emailTextField.centerXAnchor),
                 signInButton.topAnchor.constraint(
-                    equalTo: emailTextField.bottomAnchor, constant: layoutMargins.bottom * 3),
+                    equalTo: emailTextField.bottomAnchor, constant: layoutMargins.bottom * 3)
             ])
     }
 }
