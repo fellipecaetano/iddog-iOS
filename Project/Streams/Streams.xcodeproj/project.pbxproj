@@ -12,6 +12,7 @@
 		A382C60924E23A14009EF2F8 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A382C60824E23A14009EF2F8 /* Subject.swift */; };
 		A382C60C24E23B38009EF2F8 /* SubjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A382C60A24E23AF5009EF2F8 /* SubjectTests.swift */; };
 		A382C60E24E23C04009EF2F8 /* Disposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A382C60D24E23C04009EF2F8 /* Disposable.swift */; };
+		A382C61024E23CDE009EF2F8 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A382C60F24E23CDE009EF2F8 /* Observable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +34,7 @@
 		A382C60824E23A14009EF2F8 /* Subject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
 		A382C60A24E23AF5009EF2F8 /* SubjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectTests.swift; sourceTree = "<group>"; };
 		A382C60D24E23C04009EF2F8 /* Disposable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Disposable.swift; sourceTree = "<group>"; };
+		A382C60F24E23CDE009EF2F8 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				A382C5F224E2394A009EF2F8 /* Info.plist */,
 				A382C60824E23A14009EF2F8 /* Subject.swift */,
 				A382C60D24E23C04009EF2F8 /* Disposable.swift */,
+				A382C60F24E23CDE009EF2F8 /* Observable.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A382C60924E23A14009EF2F8 /* Subject.swift in Sources */,
+				A382C61024E23CDE009EF2F8 /* Observable.swift in Sources */,
 				A382C60E24E23C04009EF2F8 /* Disposable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

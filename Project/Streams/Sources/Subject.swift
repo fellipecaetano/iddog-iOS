@@ -1,4 +1,4 @@
-public final class Subject<T> {
+public final class Subject<T>: ObservableType {
     private var subscribers: [UUID: (T) -> Void] = [:]
     
     public func subscribe(_ handler: @escaping (T) -> Void) -> Disposable {
