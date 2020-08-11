@@ -1,7 +1,10 @@
 import Networking
+import Streams
 import UIKit
 
 class SignInViewController: UIViewController {
+    private let disposeBag = DisposeBag()
+
     override func loadView() {
         view = SignInView()
     }
@@ -12,14 +15,17 @@ class SignInViewController: UIViewController {
     }
 
     @objc private func signIn() {
-        _ = APIClient.live.signUp(smartView.emailTextField.text ?? "").subscribe { result in
-            switch result {
-            case let .success(response):
-                dump(response)
-            case let .failure(error):
-                print(error.localizedDescription)
-            }
-        }
+        APIClient.live.signUp(smartView.emailTextField.text ?? "")
+            .subscribe(
+                { result in
+                    switch result {
+                    case let .success(response):
+                        dump(response)
+                    case let .failure(error):
+                        print(error.localizedDescription)
+                    }
+                })
+            .disposed(by: disposeBag)
     }
 }
 

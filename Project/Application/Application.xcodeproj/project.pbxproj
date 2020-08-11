@@ -17,6 +17,7 @@
 		A382C5E024E1E961009EF2F8 /* Application.strings in Resources */ = {isa = PBXBuildFile; fileRef = A382C5DF24E1E961009EF2F8 /* Application.strings */; };
 		A382C5E324E1EBE9009EF2F8 /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = A382C5E224E1EBE8009EF2F8 /* Strings+Generated.swift */; };
 		A382C6A824E33915009EF2F8 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A382C6A524E3390B009EF2F8 /* Networking.framework */; };
+		A382C6C024E34479009EF2F8 /* Streams.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A382C6BD24E34471009EF2F8 /* Streams.framework */; };
 		E0576717116519E922E27288 /* Pods_Application.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9100A121CF07C8907AB9B43D /* Pods_Application.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,20 @@
 			remoteGlobalIDString = A382C67524E31605009EF2F8;
 			remoteInfo = NetworkingTests;
 		};
+		A382C6BC24E34471009EF2F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A382C6B524E34471009EF2F8 /* Streams.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A382C5EE24E2394A009EF2F8;
+			remoteInfo = Streams;
+		};
+		A382C6BE24E34471009EF2F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A382C6B524E34471009EF2F8 /* Streams.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A382C5F724E2394A009EF2F8;
+			remoteInfo = StreamsTests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +79,7 @@
 		A382C5DF24E1E961009EF2F8 /* Application.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Application.strings; sourceTree = "<group>"; };
 		A382C5E224E1EBE8009EF2F8 /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
 		A382C69F24E3390B009EF2F8 /* Networking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Networking.xcodeproj; path = ../Networking/Networking.xcodeproj; sourceTree = "<group>"; };
+		A382C6B524E34471009EF2F8 /* Streams.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Streams.xcodeproj; path = ../Streams/Streams.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A382C6C024E34479009EF2F8 /* Streams.framework in Frameworks */,
 				A382C6A824E33915009EF2F8 /* Networking.framework in Frameworks */,
 				E0576717116519E922E27288 /* Pods_Application.framework in Frameworks */,
 			);
@@ -151,6 +168,7 @@
 		A382C69E24E33903009EF2F8 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				A382C6B524E34471009EF2F8 /* Streams.xcodeproj */,
 				A382C69F24E3390B009EF2F8 /* Networking.xcodeproj */,
 			);
 			name = Dependencies;
@@ -161,6 +179,15 @@
 			children = (
 				A382C6A524E3390B009EF2F8 /* Networking.framework */,
 				A382C6A724E3390B009EF2F8 /* NetworkingTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A382C6B624E34471009EF2F8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A382C6BD24E34471009EF2F8 /* Streams.framework */,
+				A382C6BF24E34471009EF2F8 /* StreamsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -262,6 +289,10 @@
 					ProductGroup = A382C6A024E3390B009EF2F8 /* Products */;
 					ProjectRef = A382C69F24E3390B009EF2F8 /* Networking.xcodeproj */;
 				},
+				{
+					ProductGroup = A382C6B624E34471009EF2F8 /* Products */;
+					ProjectRef = A382C6B524E34471009EF2F8 /* Streams.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -284,6 +315,20 @@
 			fileType = wrapper.cfbundle;
 			path = NetworkingTests.xctest;
 			remoteRef = A382C6A624E3390B009EF2F8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A382C6BD24E34471009EF2F8 /* Streams.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Streams.framework;
+			remoteRef = A382C6BC24E34471009EF2F8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A382C6BF24E34471009EF2F8 /* StreamsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = StreamsTests.xctest;
+			remoteRef = A382C6BE24E34471009EF2F8 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
