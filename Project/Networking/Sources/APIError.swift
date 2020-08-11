@@ -1,2 +1,2 @@
-enum APIError: Error {
+public enum APIError: Error {
 }

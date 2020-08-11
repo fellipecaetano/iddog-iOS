@@ -15,6 +15,7 @@
 		A382C69524E31799009EF2F8 /* Streams.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A382C69124E3178C009EF2F8 /* Streams.framework */; };
 		A382C69724E319E9009EF2F8 /* SignUpResponseJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = A382C69624E319E9009EF2F8 /* SignUpResponseJSON.swift */; };
 		A382C69924E31A3A009EF2F8 /* FeedResponseJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = A382C69824E31A3A009EF2F8 /* FeedResponseJSON.swift */; };
+		A382C69B24E333E0009EF2F8 /* APIParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = A382C69A24E333E0009EF2F8 /* APIParameters.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		A382C68B24E3178C009EF2F8 /* Streams.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Streams.xcodeproj; path = ../Streams/Streams.xcodeproj; sourceTree = "<group>"; };
 		A382C69624E319E9009EF2F8 /* SignUpResponseJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResponseJSON.swift; sourceTree = "<group>"; };
 		A382C69824E31A3A009EF2F8 /* FeedResponseJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedResponseJSON.swift; sourceTree = "<group>"; };
+		A382C69A24E333E0009EF2F8 /* APIParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIParameters.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				A382C68824E31755009EF2F8 /* APIError.swift */,
 				A382C69624E319E9009EF2F8 /* SignUpResponseJSON.swift */,
 				A382C69824E31A3A009EF2F8 /* FeedResponseJSON.swift */,
+				A382C69A24E333E0009EF2F8 /* APIParameters.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 				A382C69724E319E9009EF2F8 /* SignUpResponseJSON.swift in Sources */,
 				A382C68724E31713009EF2F8 /* APIClient.swift in Sources */,
 				A382C69924E31A3A009EF2F8 /* FeedResponseJSON.swift in Sources */,
+				A382C69B24E333E0009EF2F8 /* APIParameters.swift in Sources */,
 				A382C68924E31755009EF2F8 /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

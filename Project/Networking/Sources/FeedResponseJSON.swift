@@ -1,11 +1,11 @@
-struct FeedResponseJSON: Equatable, Decodable {
-    enum Category: String, Equatable, Decodable {
+public struct FeedResponseJSON: Equatable, Decodable {
+    public enum Category: String, Equatable, Decodable {
         case husky
         case hound
         case pug
         case labrador
     }
 
-    let category: Category
-    let list: [URL]
+    public let category: Category
+    public let list: [URL]
 }

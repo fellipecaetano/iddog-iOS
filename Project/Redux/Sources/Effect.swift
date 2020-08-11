@@ -2,8 +2,8 @@ import Streams
 
 public struct Effect<Value>: Observable {
     private let observable: AnyObservable<Value>
-    
-    init (observable: AnyObservable<Value>) {
+
+    init(observable: AnyObservable<Value>) {
         self.observable = observable
     }
 
@@ -11,12 +11,15 @@ public struct Effect<Value>: Observable {
         return observable.subscribe(handler)
     }
 
-    public static func run<T>(_ work: @escaping (@escaping (T) -> Void) -> Disposable) -> Effect<T> {
+    public static func run<T>(_ work: @escaping (@escaping (T) -> Void) -> Disposable) -> Effect<T>
+    {
         let observable = AnyObservable<T>(work)
         return Effect<T>(observable: observable)
     }
 
     public static var empty: Effect {
-        return Effect.run { _ in Disposable.none }
+        return Effect.run { _ in
+            Disposable.none
+        }
     }
 }
