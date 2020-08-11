@@ -7,34 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A382C62724E240A4009EF2F8 /* Redux.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A382C61D24E240A4009EF2F8 /* Redux.framework */; };
-		A382C62E24E240A4009EF2F8 /* Redux.h in Headers */ = {isa = PBXBuildFile; fileRef = A382C62024E240A4009EF2F8 /* Redux.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A382C64E24E24211009EF2F8 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = A382C64D24E24211009EF2F8 /* Store.swift */; };
-		A382C65024E24301009EF2F8 /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A382C64F24E24301009EF2F8 /* Reducer.swift */; };
-		A382C65224E244A4009EF2F8 /* Streams.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A382C64824E24116009EF2F8 /* Streams.framework */; };
-		A382C65424E24665009EF2F8 /* StoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A382C65324E24665009EF2F8 /* StoreTests.swift */; };
-		A382C65C24E2FCC2009EF2F8 /* Effect.swift in Sources */ = {isa = PBXBuildFile; fileRef = A382C65B24E2FCC2009EF2F8 /* Effect.swift */; };
-		A382C65F24E300C0009EF2F8 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A382C65E24E300C0009EF2F8 /* Timer.swift */; };
+		A382C67624E31605009EF2F8 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A382C66C24E31604009EF2F8 /* Networking.framework */; };
+		A382C67B24E31605009EF2F8 /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A382C67A24E31605009EF2F8 /* NetworkingTests.swift */; };
+		A382C67D24E31605009EF2F8 /* Networking.h in Headers */ = {isa = PBXBuildFile; fileRef = A382C66F24E31604009EF2F8 /* Networking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A382C68724E31713009EF2F8 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A382C68624E31713009EF2F8 /* APIClient.swift */; };
+		A382C68924E31755009EF2F8 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A382C68824E31755009EF2F8 /* APIError.swift */; };
+		A382C69524E31799009EF2F8 /* Streams.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A382C69124E3178C009EF2F8 /* Streams.framework */; };
+		A382C69724E319E9009EF2F8 /* SignUpResponseJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = A382C69624E319E9009EF2F8 /* SignUpResponseJSON.swift */; };
+		A382C69924E31A3A009EF2F8 /* FeedResponseJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = A382C69824E31A3A009EF2F8 /* FeedResponseJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		A382C62824E240A4009EF2F8 /* PBXContainerItemProxy */ = {
+		A382C67724E31605009EF2F8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = A382C61424E240A4009EF2F8 /* Project object */;
+			containerPortal = A382C66324E31604009EF2F8 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = A382C61C24E240A4009EF2F8;
-			remoteInfo = Redux;
+			remoteGlobalIDString = A382C66B24E31604009EF2F8;
+			remoteInfo = Networking;
 		};
-		A382C64724E24116009EF2F8 /* PBXContainerItemProxy */ = {
+		A382C69024E3178C009EF2F8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = A382C64224E24115009EF2F8 /* Streams.xcodeproj */;
+			containerPortal = A382C68B24E3178C009EF2F8 /* Streams.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = A382C5EE24E2394A009EF2F8;
 			remoteInfo = Streams;
 		};
-		A382C64924E24116009EF2F8 /* PBXContainerItemProxy */ = {
+		A382C69224E3178C009EF2F8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = A382C64224E24115009EF2F8 /* Streams.xcodeproj */;
+			containerPortal = A382C68B24E3178C009EF2F8 /* Streams.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = A382C5F724E2394A009EF2F8;
 			remoteInfo = StreamsTests;
@@ -42,184 +42,175 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A382C61D24E240A4009EF2F8 /* Redux.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Redux.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A382C62024E240A4009EF2F8 /* Redux.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Redux.h; sourceTree = "<group>"; };
-		A382C62124E240A4009EF2F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A382C62624E240A4009EF2F8 /* ReduxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReduxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A382C62D24E240A4009EF2F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A382C64224E24115009EF2F8 /* Streams.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Streams.xcodeproj; path = ../Streams/Streams.xcodeproj; sourceTree = "<group>"; };
-		A382C64D24E24211009EF2F8 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
-		A382C64F24E24301009EF2F8 /* Reducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reducer.swift; sourceTree = "<group>"; };
-		A382C65324E24665009EF2F8 /* StoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTests.swift; sourceTree = "<group>"; };
-		A382C65B24E2FCC2009EF2F8 /* Effect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Effect.swift; sourceTree = "<group>"; };
-		A382C65E24E300C0009EF2F8 /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
+		A382C66C24E31604009EF2F8 /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A382C66F24E31604009EF2F8 /* Networking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
+		A382C67024E31604009EF2F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A382C67524E31605009EF2F8 /* NetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A382C67A24E31605009EF2F8 /* NetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTests.swift; sourceTree = "<group>"; };
+		A382C67C24E31605009EF2F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A382C68624E31713009EF2F8 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		A382C68824E31755009EF2F8 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		A382C68B24E3178C009EF2F8 /* Streams.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Streams.xcodeproj; path = ../Streams/Streams.xcodeproj; sourceTree = "<group>"; };
+		A382C69624E319E9009EF2F8 /* SignUpResponseJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResponseJSON.swift; sourceTree = "<group>"; };
+		A382C69824E31A3A009EF2F8 /* FeedResponseJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedResponseJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		A382C61A24E240A4009EF2F8 /* Frameworks */ = {
+		A382C66924E31604009EF2F8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A382C65224E244A4009EF2F8 /* Streams.framework in Frameworks */,
+				A382C69524E31799009EF2F8 /* Streams.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A382C62324E240A4009EF2F8 /* Frameworks */ = {
+		A382C67224E31605009EF2F8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A382C62724E240A4009EF2F8 /* Redux.framework in Frameworks */,
+				A382C67624E31605009EF2F8 /* Networking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A382C61324E240A4009EF2F8 = {
+		A382C66224E31604009EF2F8 = {
 			isa = PBXGroup;
 			children = (
-				A382C64124E2410D009EF2F8 /* Dependencies */,
-				A382C61F24E240A4009EF2F8 /* Sources */,
-				A382C62A24E240A4009EF2F8 /* Tests */,
-				A382C61E24E240A4009EF2F8 /* Products */,
-				A382C65124E244A4009EF2F8 /* Frameworks */,
+				A382C68A24E31783009EF2F8 /* Dependencies */,
+				A382C66E24E31604009EF2F8 /* Sources */,
+				A382C67924E31605009EF2F8 /* Tests */,
+				A382C66D24E31604009EF2F8 /* Products */,
+				A382C69424E31799009EF2F8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		A382C61E24E240A4009EF2F8 /* Products */ = {
+		A382C66D24E31604009EF2F8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A382C61D24E240A4009EF2F8 /* Redux.framework */,
-				A382C62624E240A4009EF2F8 /* ReduxTests.xctest */,
+				A382C66C24E31604009EF2F8 /* Networking.framework */,
+				A382C67524E31605009EF2F8 /* NetworkingTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A382C61F24E240A4009EF2F8 /* Sources */ = {
+		A382C66E24E31604009EF2F8 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				A382C65D24E300B1009EF2F8 /* Effects */,
-				A382C62024E240A4009EF2F8 /* Redux.h */,
-				A382C62124E240A4009EF2F8 /* Info.plist */,
-				A382C64D24E24211009EF2F8 /* Store.swift */,
-				A382C64F24E24301009EF2F8 /* Reducer.swift */,
-				A382C65B24E2FCC2009EF2F8 /* Effect.swift */,
+				A382C66F24E31604009EF2F8 /* Networking.h */,
+				A382C67024E31604009EF2F8 /* Info.plist */,
+				A382C68624E31713009EF2F8 /* APIClient.swift */,
+				A382C68824E31755009EF2F8 /* APIError.swift */,
+				A382C69624E319E9009EF2F8 /* SignUpResponseJSON.swift */,
+				A382C69824E31A3A009EF2F8 /* FeedResponseJSON.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
 		};
-		A382C62A24E240A4009EF2F8 /* Tests */ = {
+		A382C67924E31605009EF2F8 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				A382C62D24E240A4009EF2F8 /* Info.plist */,
-				A382C65324E24665009EF2F8 /* StoreTests.swift */,
+				A382C67A24E31605009EF2F8 /* NetworkingTests.swift */,
+				A382C67C24E31605009EF2F8 /* Info.plist */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
 		};
-		A382C64124E2410D009EF2F8 /* Dependencies */ = {
+		A382C68A24E31783009EF2F8 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				A382C64224E24115009EF2F8 /* Streams.xcodeproj */,
+				A382C68B24E3178C009EF2F8 /* Streams.xcodeproj */,
 			);
 			name = Dependencies;
 			sourceTree = "<group>";
 		};
-		A382C64324E24116009EF2F8 /* Products */ = {
+		A382C68C24E3178C009EF2F8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A382C64824E24116009EF2F8 /* Streams.framework */,
-				A382C64A24E24116009EF2F8 /* StreamsTests.xctest */,
+				A382C69124E3178C009EF2F8 /* Streams.framework */,
+				A382C69324E3178C009EF2F8 /* StreamsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A382C65124E244A4009EF2F8 /* Frameworks */ = {
+		A382C69424E31799009EF2F8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A382C65D24E300B1009EF2F8 /* Effects */ = {
-			isa = PBXGroup;
-			children = (
-				A382C65E24E300C0009EF2F8 /* Timer.swift */,
-			);
-			path = Effects;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		A382C61824E240A4009EF2F8 /* Headers */ = {
+		A382C66724E31604009EF2F8 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A382C62E24E240A4009EF2F8 /* Redux.h in Headers */,
+				A382C67D24E31605009EF2F8 /* Networking.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		A382C61C24E240A4009EF2F8 /* Redux */ = {
+		A382C66B24E31604009EF2F8 /* Networking */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A382C63124E240A4009EF2F8 /* Build configuration list for PBXNativeTarget "Redux" */;
+			buildConfigurationList = A382C68024E31605009EF2F8 /* Build configuration list for PBXNativeTarget "Networking" */;
 			buildPhases = (
-				A382C61824E240A4009EF2F8 /* Headers */,
-				A382C61924E240A4009EF2F8 /* Sources */,
-				A382C61A24E240A4009EF2F8 /* Frameworks */,
-				A382C61B24E240A4009EF2F8 /* Resources */,
+				A382C66724E31604009EF2F8 /* Headers */,
+				A382C66824E31604009EF2F8 /* Sources */,
+				A382C66924E31604009EF2F8 /* Frameworks */,
+				A382C66A24E31604009EF2F8 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Redux;
-			productName = Redux;
-			productReference = A382C61D24E240A4009EF2F8 /* Redux.framework */;
+			name = Networking;
+			productName = Networking;
+			productReference = A382C66C24E31604009EF2F8 /* Networking.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		A382C62524E240A4009EF2F8 /* ReduxTests */ = {
+		A382C67424E31605009EF2F8 /* NetworkingTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A382C63424E240A4009EF2F8 /* Build configuration list for PBXNativeTarget "ReduxTests" */;
+			buildConfigurationList = A382C68324E31605009EF2F8 /* Build configuration list for PBXNativeTarget "NetworkingTests" */;
 			buildPhases = (
-				A382C62224E240A4009EF2F8 /* Sources */,
-				A382C62324E240A4009EF2F8 /* Frameworks */,
-				A382C62424E240A4009EF2F8 /* Resources */,
+				A382C67124E31605009EF2F8 /* Sources */,
+				A382C67224E31605009EF2F8 /* Frameworks */,
+				A382C67324E31605009EF2F8 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				A382C62924E240A4009EF2F8 /* PBXTargetDependency */,
+				A382C67824E31605009EF2F8 /* PBXTargetDependency */,
 			);
-			name = ReduxTests;
-			productName = ReduxTests;
-			productReference = A382C62624E240A4009EF2F8 /* ReduxTests.xctest */;
+			name = NetworkingTests;
+			productName = NetworkingTests;
+			productReference = A382C67524E31605009EF2F8 /* NetworkingTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		A382C61424E240A4009EF2F8 /* Project object */ = {
+		A382C66324E31604009EF2F8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Fellipe Caetano";
 				TargetAttributes = {
-					A382C61C24E240A4009EF2F8 = {
+					A382C66B24E31604009EF2F8 = {
 						CreatedOnToolsVersion = 11.3.1;
 						LastSwiftMigration = 1130;
 					};
-					A382C62524E240A4009EF2F8 = {
+					A382C67424E31605009EF2F8 = {
 						CreatedOnToolsVersion = 11.3.1;
-						LastSwiftMigration = 1130;
 					};
 				};
 			};
-			buildConfigurationList = A382C61724E240A4009EF2F8 /* Build configuration list for PBXProject "Redux" */;
+			buildConfigurationList = A382C66624E31604009EF2F8 /* Build configuration list for PBXProject "Networking" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -227,49 +218,49 @@
 				en,
 				Base,
 			);
-			mainGroup = A382C61324E240A4009EF2F8;
-			productRefGroup = A382C61E24E240A4009EF2F8 /* Products */;
+			mainGroup = A382C66224E31604009EF2F8;
+			productRefGroup = A382C66D24E31604009EF2F8 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = A382C64324E24116009EF2F8 /* Products */;
-					ProjectRef = A382C64224E24115009EF2F8 /* Streams.xcodeproj */;
+					ProductGroup = A382C68C24E3178C009EF2F8 /* Products */;
+					ProjectRef = A382C68B24E3178C009EF2F8 /* Streams.xcodeproj */;
 				},
 			);
 			projectRoot = "";
 			targets = (
-				A382C61C24E240A4009EF2F8 /* Redux */,
-				A382C62524E240A4009EF2F8 /* ReduxTests */,
+				A382C66B24E31604009EF2F8 /* Networking */,
+				A382C67424E31605009EF2F8 /* NetworkingTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		A382C64824E24116009EF2F8 /* Streams.framework */ = {
+		A382C69124E3178C009EF2F8 /* Streams.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Streams.framework;
-			remoteRef = A382C64724E24116009EF2F8 /* PBXContainerItemProxy */;
+			remoteRef = A382C69024E3178C009EF2F8 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		A382C64A24E24116009EF2F8 /* StreamsTests.xctest */ = {
+		A382C69324E3178C009EF2F8 /* StreamsTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = StreamsTests.xctest;
-			remoteRef = A382C64924E24116009EF2F8 /* PBXContainerItemProxy */;
+			remoteRef = A382C69224E3178C009EF2F8 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
-		A382C61B24E240A4009EF2F8 /* Resources */ = {
+		A382C66A24E31604009EF2F8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A382C62424E240A4009EF2F8 /* Resources */ = {
+		A382C67324E31605009EF2F8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -279,37 +270,37 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		A382C61924E240A4009EF2F8 /* Sources */ = {
+		A382C66824E31604009EF2F8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A382C65C24E2FCC2009EF2F8 /* Effect.swift in Sources */,
-				A382C65F24E300C0009EF2F8 /* Timer.swift in Sources */,
-				A382C65024E24301009EF2F8 /* Reducer.swift in Sources */,
-				A382C64E24E24211009EF2F8 /* Store.swift in Sources */,
+				A382C69724E319E9009EF2F8 /* SignUpResponseJSON.swift in Sources */,
+				A382C68724E31713009EF2F8 /* APIClient.swift in Sources */,
+				A382C69924E31A3A009EF2F8 /* FeedResponseJSON.swift in Sources */,
+				A382C68924E31755009EF2F8 /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A382C62224E240A4009EF2F8 /* Sources */ = {
+		A382C67124E31605009EF2F8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A382C65424E24665009EF2F8 /* StoreTests.swift in Sources */,
+				A382C67B24E31605009EF2F8 /* NetworkingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		A382C62924E240A4009EF2F8 /* PBXTargetDependency */ = {
+		A382C67824E31605009EF2F8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A382C61C24E240A4009EF2F8 /* Redux */;
-			targetProxy = A382C62824E240A4009EF2F8 /* PBXContainerItemProxy */;
+			target = A382C66B24E31604009EF2F8 /* Networking */;
+			targetProxy = A382C67724E31605009EF2F8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		A382C62F24E240A4009EF2F8 /* Debug */ = {
+		A382C67E24E31605009EF2F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -372,7 +363,7 @@
 			};
 			name = Debug;
 		};
-		A382C63024E240A4009EF2F8 /* Release */ = {
+		A382C67F24E31605009EF2F8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -429,7 +420,7 @@
 			};
 			name = Release;
 		};
-		A382C63224E240A4009EF2F8 /* Debug */ = {
+		A382C68124E31605009EF2F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -447,7 +438,7 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.fellipecaetano.iddog.Redux;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fellipecaetano.iddog.Networking;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -456,7 +447,7 @@
 			};
 			name = Debug;
 		};
-		A382C63324E240A4009EF2F8 /* Release */ = {
+		A382C68224E31605009EF2F8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -474,7 +465,7 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.fellipecaetano.iddog.Redux;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fellipecaetano.iddog.Networking;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -482,11 +473,10 @@
 			};
 			name = Release;
 		};
-		A382C63524E240A4009EF2F8 /* Debug */ = {
+		A382C68424E31605009EF2F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8Q86GGRUX8;
 				INFOPLIST_FILE = Tests/Info.plist;
@@ -495,19 +485,17 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.fellipecaetano.iddog.ReduxTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fellipecaetano.iddog.NetworkingTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		A382C63624E240A4009EF2F8 /* Release */ = {
+		A382C68524E31605009EF2F8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8Q86GGRUX8;
 				INFOPLIST_FILE = Tests/Info.plist;
@@ -516,7 +504,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.fellipecaetano.iddog.ReduxTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fellipecaetano.iddog.NetworkingTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -526,34 +514,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A382C61724E240A4009EF2F8 /* Build configuration list for PBXProject "Redux" */ = {
+		A382C66624E31604009EF2F8 /* Build configuration list for PBXProject "Networking" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A382C62F24E240A4009EF2F8 /* Debug */,
-				A382C63024E240A4009EF2F8 /* Release */,
+				A382C67E24E31605009EF2F8 /* Debug */,
+				A382C67F24E31605009EF2F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A382C63124E240A4009EF2F8 /* Build configuration list for PBXNativeTarget "Redux" */ = {
+		A382C68024E31605009EF2F8 /* Build configuration list for PBXNativeTarget "Networking" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A382C63224E240A4009EF2F8 /* Debug */,
-				A382C63324E240A4009EF2F8 /* Release */,
+				A382C68124E31605009EF2F8 /* Debug */,
+				A382C68224E31605009EF2F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A382C63424E240A4009EF2F8 /* Build configuration list for PBXNativeTarget "ReduxTests" */ = {
+		A382C68324E31605009EF2F8 /* Build configuration list for PBXNativeTarget "NetworkingTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A382C63524E240A4009EF2F8 /* Debug */,
-				A382C63624E240A4009EF2F8 /* Release */,
+				A382C68424E31605009EF2F8 /* Debug */,
+				A382C68524E31605009EF2F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = A382C61424E240A4009EF2F8 /* Project object */;
+	rootObject = A382C66324E31604009EF2F8 /* Project object */;
 }
