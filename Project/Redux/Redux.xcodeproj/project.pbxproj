@@ -20,6 +20,20 @@
 			remoteGlobalIDString = A382C61C24E240A4009EF2F8;
 			remoteInfo = Redux;
 		};
+		A382C64724E24116009EF2F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A382C64224E24115009EF2F8 /* Streams.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A382C5EE24E2394A009EF2F8;
+			remoteInfo = Streams;
+		};
+		A382C64924E24116009EF2F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A382C64224E24115009EF2F8 /* Streams.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A382C5F724E2394A009EF2F8;
+			remoteInfo = StreamsTests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +43,7 @@
 		A382C62624E240A4009EF2F8 /* ReduxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReduxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A382C62B24E240A4009EF2F8 /* ReduxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduxTests.swift; sourceTree = "<group>"; };
 		A382C62D24E240A4009EF2F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A382C64224E24115009EF2F8 /* Streams.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Streams.xcodeproj; path = ../Streams/Streams.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +68,7 @@
 		A382C61324E240A4009EF2F8 = {
 			isa = PBXGroup;
 			children = (
+				A382C64124E2410D009EF2F8 /* Dependencies */,
 				A382C61F24E240A4009EF2F8 /* Sources */,
 				A382C62A24E240A4009EF2F8 /* Tests */,
 				A382C61E24E240A4009EF2F8 /* Products */,
@@ -84,6 +100,23 @@
 				A382C62D24E240A4009EF2F8 /* Info.plist */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		A382C64124E2410D009EF2F8 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				A382C64224E24115009EF2F8 /* Streams.xcodeproj */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		A382C64324E24116009EF2F8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A382C64824E24116009EF2F8 /* Streams.framework */,
+				A382C64A24E24116009EF2F8 /* StreamsTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +198,12 @@
 			mainGroup = A382C61324E240A4009EF2F8;
 			productRefGroup = A382C61E24E240A4009EF2F8 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A382C64324E24116009EF2F8 /* Products */;
+					ProjectRef = A382C64224E24115009EF2F8 /* Streams.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				A382C61C24E240A4009EF2F8 /* Redux */,
@@ -172,6 +211,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		A382C64824E24116009EF2F8 /* Streams.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Streams.framework;
+			remoteRef = A382C64724E24116009EF2F8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A382C64A24E24116009EF2F8 /* StreamsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = StreamsTests.xctest;
+			remoteRef = A382C64924E24116009EF2F8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		A382C61B24E240A4009EF2F8 /* Resources */ = {
