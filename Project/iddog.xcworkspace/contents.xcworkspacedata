@@ -8,9 +8,6 @@
       location = "group:Streams/Streams.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Scripts">
-   </FileRef>
-   <FileRef
       location = "group:Podfile">
    </FileRef>
    <FileRef

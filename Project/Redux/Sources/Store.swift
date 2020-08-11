@@ -11,6 +11,7 @@ public final class Store<State, Action>: Observable, Observer {
     }
 
     public func subscribe(_ handler: @escaping (State) -> Void) -> Disposable {
+        handler(state)
         return subject.subscribe(handler)
     }
 
