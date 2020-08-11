@@ -1,5 +1,9 @@
 public final class Subject<T>: Observable, Observer {
-    private var subscribers: [UUID: (T) -> Void] = [:]
+    private var subscribers: [UUID: (T) -> Void]
+    
+    public init () {
+        subscribers = [:]
+    }
     
     public func subscribe(_ handler: @escaping (T) -> Void) -> Disposable {
         let uuid = UUID()

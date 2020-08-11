@@ -1,10 +1,21 @@
 import Streams
 
-final class Store<State, Action>: Observable, Observer {
-    func subscribe(_ handler: @escaping (State) -> Void) -> Disposable {
-        return Disposable {}
+public final class Store<State, Action>: Observable, Observer {
+    public private(set) var state: State
+    private let reducer: Reducer<State, Action>
+    private let subject = Subject<State>()
+    
+    init (initialState: State, reducer: Reducer<State, Action>) {
+        state = initialState
+        self.reducer = reducer
     }
     
-    func emit(_ value: Action) {
+    public func subscribe(_ handler: @escaping (State) -> Void) -> Disposable {
+        return subject.subscribe(handler)
+    }
+    
+    public func emit(_ action: Action) {
+        reducer.reduce(&state, action)
+        subject.emit(state)
     }
 }
