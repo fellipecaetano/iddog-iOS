@@ -13,6 +13,8 @@
 		A382C65024E24301009EF2F8 /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A382C64F24E24301009EF2F8 /* Reducer.swift */; };
 		A382C65224E244A4009EF2F8 /* Streams.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A382C64824E24116009EF2F8 /* Streams.framework */; };
 		A382C65424E24665009EF2F8 /* StoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A382C65324E24665009EF2F8 /* StoreTests.swift */; };
+		A382C65C24E2FCC2009EF2F8 /* Effect.swift in Sources */ = {isa = PBXBuildFile; fileRef = A382C65B24E2FCC2009EF2F8 /* Effect.swift */; };
+		A382C65F24E300C0009EF2F8 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A382C65E24E300C0009EF2F8 /* Timer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		A382C64D24E24211009EF2F8 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		A382C64F24E24301009EF2F8 /* Reducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reducer.swift; sourceTree = "<group>"; };
 		A382C65324E24665009EF2F8 /* StoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTests.swift; sourceTree = "<group>"; };
+		A382C65B24E2FCC2009EF2F8 /* Effect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Effect.swift; sourceTree = "<group>"; };
+		A382C65E24E300C0009EF2F8 /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,10 +98,12 @@
 		A382C61F24E240A4009EF2F8 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				A382C65D24E300B1009EF2F8 /* Effects */,
 				A382C62024E240A4009EF2F8 /* Redux.h */,
 				A382C62124E240A4009EF2F8 /* Info.plist */,
 				A382C64D24E24211009EF2F8 /* Store.swift */,
 				A382C64F24E24301009EF2F8 /* Reducer.swift */,
+				A382C65B24E2FCC2009EF2F8 /* Effect.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -133,6 +139,14 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A382C65D24E300B1009EF2F8 /* Effects */ = {
+			isa = PBXGroup;
+			children = (
+				A382C65E24E300C0009EF2F8 /* Timer.swift */,
+			);
+			path = Effects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,6 +283,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A382C65C24E2FCC2009EF2F8 /* Effect.swift in Sources */,
+				A382C65F24E300C0009EF2F8 /* Timer.swift in Sources */,
 				A382C65024E24301009EF2F8 /* Reducer.swift in Sources */,
 				A382C64E24E24211009EF2F8 /* Store.swift in Sources */,
 			);
