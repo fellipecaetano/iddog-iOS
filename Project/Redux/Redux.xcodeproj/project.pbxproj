@@ -10,6 +10,7 @@
 		A382C62724E240A4009EF2F8 /* Redux.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A382C61D24E240A4009EF2F8 /* Redux.framework */; };
 		A382C62C24E240A4009EF2F8 /* ReduxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A382C62B24E240A4009EF2F8 /* ReduxTests.swift */; };
 		A382C62E24E240A4009EF2F8 /* Redux.h in Headers */ = {isa = PBXBuildFile; fileRef = A382C62024E240A4009EF2F8 /* Redux.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A382C64E24E24211009EF2F8 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = A382C64D24E24211009EF2F8 /* Store.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		A382C62B24E240A4009EF2F8 /* ReduxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduxTests.swift; sourceTree = "<group>"; };
 		A382C62D24E240A4009EF2F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A382C64224E24115009EF2F8 /* Streams.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Streams.xcodeproj; path = ../Streams/Streams.xcodeproj; sourceTree = "<group>"; };
+		A382C64D24E24211009EF2F8 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 			children = (
 				A382C62024E240A4009EF2F8 /* Redux.h */,
 				A382C62124E240A4009EF2F8 /* Info.plist */,
+				A382C64D24E24211009EF2F8 /* Store.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 				TargetAttributes = {
 					A382C61C24E240A4009EF2F8 = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 					};
 					A382C62524E240A4009EF2F8 = {
 						CreatedOnToolsVersion = 11.3.1;
@@ -251,6 +255,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A382C64E24E24211009EF2F8 /* Store.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +401,7 @@
 		A382C63224E240A4009EF2F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 8Q86GGRUX8;
@@ -412,6 +418,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.fellipecaetano.iddog.Redux;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -420,6 +427,7 @@
 		A382C63324E240A4009EF2F8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 8Q86GGRUX8;
@@ -444,6 +452,7 @@
 		A382C63524E240A4009EF2F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8Q86GGRUX8;
 				INFOPLIST_FILE = Tests/Info.plist;
@@ -462,6 +471,7 @@
 		A382C63624E240A4009EF2F8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8Q86GGRUX8;
 				INFOPLIST_FILE = Tests/Info.plist;

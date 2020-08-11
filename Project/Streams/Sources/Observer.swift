@@ -1,11 +1,11 @@
 public protocol Observer {
-    associatedtype Value
+    associatedtype EmittedValue
     
-    func emit(_ value: Value)
+    func emit(_ value: EmittedValue)
 }
 
 public extension Observer {
-    func erase() -> AnyObserver<Value> {
+    func erase() -> AnyObserver<EmittedValue> {
         return AnyObserver(emit)
     }
 }

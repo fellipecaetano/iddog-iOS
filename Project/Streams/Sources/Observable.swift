@@ -1,11 +1,11 @@
 public protocol Observable {
-    associatedtype Value
+    associatedtype SubscribedValue
     
-    func subscribe(_ handler: @escaping (Value) -> Void) -> Disposable
+    func subscribe(_ handler: @escaping (SubscribedValue) -> Void) -> Disposable
 }
 
 public extension Observable {
-    func erase() -> AnyObservable<Value> {
+    func erase() -> AnyObservable<SubscribedValue> {
         return AnyObservable(subscribe)
     }
 }
