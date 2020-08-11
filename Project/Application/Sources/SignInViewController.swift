@@ -1,5 +1,5 @@
-import Alamofire
 import UIKit
+import Networking
 
 class SignInViewController: UIViewController {
     override func loadView() {
@@ -12,17 +12,10 @@ class SignInViewController: UIViewController {
     }
 
     @objc private func signIn() {
-        let url = URL(string: "https://iddog-nrizncxqba-uc.a.run.app/signup")!
-
-        request(
-            url, method: .post, parameters: ["email": smartView.emailTextField.text ?? ""],
-            encoding: JSONEncoding())
-            .validate()
-            .responseJSON
-        { response in
-            switch response.result {
-            case let .success(data):
-                print(data)
+        _ = APIClient.live.signUp(smartView.emailTextField.text ?? "").subscribe { result in
+            switch result {
+            case let .success(response):
+                dump(response)
             case let .failure(error):
                 print(error.localizedDescription)
             }
