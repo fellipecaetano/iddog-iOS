@@ -15,3 +15,8 @@ target 'Application' do
     inherit! :search_paths
   end
 end
+
+target 'Networking' do
+  project 'Networking/Networking.xcodeproj/'
+  pod 'Alamofire', '~> 4.9'
+end
