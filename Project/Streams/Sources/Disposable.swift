@@ -1,7 +1,7 @@
 public final class Disposable {
     public let dispose: () -> Void
-    
-    public init (dispose: @escaping () -> Void) {
+
+    public init(dispose: @escaping () -> Void) {
         self.dispose = dispose
     }
 }
