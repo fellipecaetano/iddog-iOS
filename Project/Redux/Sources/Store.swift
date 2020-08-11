@@ -16,7 +16,9 @@ public final class Store<State, Action>: Observable, Observer {
     }
 
     public func emit(_ action: Action) {
-        reducer.reduce(&state, action)
+        let effect = reducer.reduce(&state, action)
         subject.emit(state)
+        let disposable = effect.subscribe(emit)
+        disposable.dispose()
     }
 }
