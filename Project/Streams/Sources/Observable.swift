@@ -13,7 +13,7 @@ extension Observable {
 public struct AnyObservable<T>: Observable {
     private let _subscribe: (@escaping (T) -> Void) -> Disposable
 
-    init(_ subscribe: @escaping (@escaping (T) -> Void) -> Disposable) {
+    public init(_ subscribe: @escaping (@escaping (T) -> Void) -> Disposable) {
         _subscribe = subscribe
     }
 
