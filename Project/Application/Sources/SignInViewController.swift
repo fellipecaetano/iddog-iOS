@@ -1,5 +1,5 @@
-import UIKit
 import Networking
+import UIKit
 
 class SignInViewController: UIViewController {
     override func loadView() {
