@@ -17,9 +17,8 @@ enum HTTPClient {
                 encoding: encoding,
                 headers: headers
             )
-                .validate()
-                .responseData
-            { response in
+            .validate()
+            .responseData { response in
                 switch response.result {
                 case let .success(data):
                     let decoder = JSONDecoder()

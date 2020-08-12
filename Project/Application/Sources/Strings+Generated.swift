@@ -16,6 +16,7 @@ internal enum L10n {
     /// Entrar
     internal static let signIn = L10n.tr("Application", "sign_in")
 }
+
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces
 
@@ -32,4 +33,5 @@ extension L10n {
 private enum BundleToken {
     static let bundle = Bundle(for: BundleToken.self)
 }
+
 // swiftlint:enable convenience_type

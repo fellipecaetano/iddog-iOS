@@ -25,7 +25,7 @@ final class SignInView: UIView {
         setUp()
     }
 
-    required init?(coder: NSCoder) {
+    required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
@@ -63,7 +63,8 @@ final class SignInView: UIView {
             [
                 signInButton.centerXAnchor.constraint(equalTo: emailTextField.centerXAnchor),
                 signInButton.topAnchor.constraint(
-                    equalTo: emailTextField.bottomAnchor, constant: layoutMargins.bottom * 3),
+                    equalTo: emailTextField.bottomAnchor, constant: layoutMargins.bottom * 3
+                ),
             ])
     }
 }

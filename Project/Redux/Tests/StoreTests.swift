@@ -27,7 +27,8 @@ class StoreTests: XCTestCase {
                 }
 
                 return Effect.empty
-            })
+            }
+        )
     }
 
     func testReducer() {

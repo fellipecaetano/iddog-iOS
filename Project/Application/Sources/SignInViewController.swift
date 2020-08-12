@@ -16,15 +16,14 @@ class SignInViewController: UIViewController {
 
     @objc private func signIn() {
         APIClient.live.signUp(smartView.emailTextField.text ?? "")
-            .subscribe(
-                { result in
-                    switch result {
-                    case let .success(response):
-                        dump(response)
-                    case let .failure(error):
-                        print(error.localizedDescription)
-                    }
-                })
+            .subscribe { result in
+                switch result {
+                case let .success(response):
+                    dump(response)
+                case let .failure(error):
+                    print(error.localizedDescription)
+                }
+            }
             .disposed(by: disposeBag)
     }
 }

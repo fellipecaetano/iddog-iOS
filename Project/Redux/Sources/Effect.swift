@@ -11,8 +11,7 @@ public struct Effect<Value>: Observable {
         return observable.subscribe(handler)
     }
 
-    public static func run<T>(_ work: @escaping (@escaping (T) -> Void) -> Disposable) -> Effect<T>
-    {
+    public static func run<T>(_ work: @escaping (@escaping (T) -> Void) -> Disposable) -> Effect<T> {
         let observable = AnyObservable<T>(work)
         return Effect<T>(observable: observable)
     }
