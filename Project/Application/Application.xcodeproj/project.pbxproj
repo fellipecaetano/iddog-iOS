@@ -20,6 +20,7 @@
 		A382C5E324E1EBE9009EF2F8 /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = A382C5E224E1EBE8009EF2F8 /* Strings+Generated.swift */; };
 		A382C6A824E33915009EF2F8 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A382C6A524E3390B009EF2F8 /* Networking.framework */; };
 		A382C6C024E34479009EF2F8 /* Streams.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A382C6BD24E34471009EF2F8 /* Streams.framework */; };
+		A3C58A5C24E468EF0076B8B5 /* Authentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C58A5524E468E80076B8B5 /* Authentication.framework */; };
 		E0576717116519E922E27288 /* Pods_Application.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9100A121CF07C8907AB9B43D /* Pods_Application.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,20 @@
 			remoteGlobalIDString = A382C5F724E2394A009EF2F8;
 			remoteInfo = StreamsTests;
 		};
+		A3C58A5424E468E80076B8B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A3C58A4F24E468E70076B8B5 /* Authentication.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A3C58A2D24E4515F0076B8B5;
+			remoteInfo = Authentication;
+		};
+		A3C58A5624E468E80076B8B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A3C58A4F24E468E70076B8B5 /* Authentication.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A3C58A3624E4515F0076B8B5;
+			remoteInfo = AuthenticationTests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +99,7 @@
 		A382C5E224E1EBE8009EF2F8 /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
 		A382C69F24E3390B009EF2F8 /* Networking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Networking.xcodeproj; path = ../Networking/Networking.xcodeproj; sourceTree = "<group>"; };
 		A382C6B524E34471009EF2F8 /* Streams.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Streams.xcodeproj; path = ../Streams/Streams.xcodeproj; sourceTree = "<group>"; };
+		A3C58A4F24E468E70076B8B5 /* Authentication.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Authentication.xcodeproj; path = ../Authentication/Authentication.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3C58A5C24E468EF0076B8B5 /* Authentication.framework in Frameworks */,
 				A382C6C024E34479009EF2F8 /* Streams.framework in Frameworks */,
 				A382C6A824E33915009EF2F8 /* Networking.framework in Frameworks */,
 				E0576717116519E922E27288 /* Pods_Application.framework in Frameworks */,
@@ -174,6 +191,7 @@
 		A382C69E24E33903009EF2F8 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				A3C58A4F24E468E70076B8B5 /* Authentication.xcodeproj */,
 				A382C6B524E34471009EF2F8 /* Streams.xcodeproj */,
 				A382C69F24E3390B009EF2F8 /* Networking.xcodeproj */,
 			);
@@ -194,6 +212,15 @@
 			children = (
 				A382C6BD24E34471009EF2F8 /* Streams.framework */,
 				A382C6BF24E34471009EF2F8 /* StreamsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A3C58A5024E468E70076B8B5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A3C58A5524E468E80076B8B5 /* Authentication.framework */,
+				A3C58A5724E468E80076B8B5 /* AuthenticationTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -292,6 +319,10 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = A3C58A5024E468E70076B8B5 /* Products */;
+					ProjectRef = A3C58A4F24E468E70076B8B5 /* Authentication.xcodeproj */;
+				},
+				{
 					ProductGroup = A382C6A024E3390B009EF2F8 /* Products */;
 					ProjectRef = A382C69F24E3390B009EF2F8 /* Networking.xcodeproj */;
 				},
@@ -335,6 +366,20 @@
 			fileType = wrapper.cfbundle;
 			path = StreamsTests.xctest;
 			remoteRef = A382C6BE24E34471009EF2F8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A3C58A5524E468E80076B8B5 /* Authentication.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Authentication.framework;
+			remoteRef = A3C58A5424E468E80076B8B5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A3C58A5724E468E80076B8B5 /* AuthenticationTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AuthenticationTests.xctest;
+			remoteRef = A3C58A5624E468E80076B8B5 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */

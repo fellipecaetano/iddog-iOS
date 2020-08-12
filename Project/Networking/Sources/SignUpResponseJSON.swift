@@ -4,5 +4,5 @@ public struct SignUpResponseJSON: Equatable, Decodable {
         public let token: String
     }
 
-    let user: User
+    public let user: User
 }

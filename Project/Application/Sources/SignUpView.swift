@@ -6,6 +6,7 @@ final class SignUpView: UIView {
         textField.placeholder = L10n.email
         textField.keyboardType = .emailAddress
         textField.autocapitalizationType = .none
+        textField.autocorrectionType = .no
 
         if #available(iOS 10.0, *) {
             textField.textContentType = .emailAddress

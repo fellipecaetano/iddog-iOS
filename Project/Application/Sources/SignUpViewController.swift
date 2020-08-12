@@ -1,6 +1,7 @@
 import Networking
 import Streams
 import UIKit
+import Authentication
 
 class SignUpViewController: UIViewController {
     private let disposeBag = DisposeBag()
@@ -12,6 +13,13 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         smartView.signUpButton.addTarget(self, action: #selector(signIn), for: .touchUpInside)
+        
+        do {
+            let authentication = try AuthenticationRepository.live.get()
+            smartView.emailTextField.text = authentication.email
+        } catch {
+            print(error)
+        }
     }
 
     @objc private func signIn() {
@@ -19,7 +27,13 @@ class SignUpViewController: UIViewController {
             .subscribe { result in
                 switch result {
                 case let .success(response):
-                    dump(response)
+                    let authentication = Authentication(email: response.user.email, token: response.user.token)
+                    
+                    do {
+                        try AuthenticationRepository.live.put(authentication)
+                    } catch {
+                        print(error)
+                    }
                 case let .failure(error):
                     print(error.localizedDescription)
                 }
