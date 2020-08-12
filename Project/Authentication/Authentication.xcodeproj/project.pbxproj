@@ -11,6 +11,8 @@
 		A3C58A3E24E4515F0076B8B5 /* Authentication.h in Headers */ = {isa = PBXBuildFile; fileRef = A3C58A3024E4515F0076B8B5 /* Authentication.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A3C58A4824E454130076B8B5 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C58A4724E454130076B8B5 /* Authentication.swift */; };
 		A3C58A4A24E456FC0076B8B5 /* AuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C58A4924E456FC0076B8B5 /* AuthenticationRepository.swift */; };
+		A3C58A4C24E45FB50076B8B5 /* KeychainAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C58A4B24E45FB50076B8B5 /* KeychainAccess.swift */; };
+		A3C58A4E24E45FBF0076B8B5 /* KeychainAccessError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C58A4D24E45FBF0076B8B5 /* KeychainAccessError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +33,8 @@
 		A3C58A3D24E4515F0076B8B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3C58A4724E454130076B8B5 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		A3C58A4924E456FC0076B8B5 /* AuthenticationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRepository.swift; sourceTree = "<group>"; };
+		A3C58A4B24E45FB50076B8B5 /* KeychainAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainAccess.swift; sourceTree = "<group>"; };
+		A3C58A4D24E45FBF0076B8B5 /* KeychainAccessError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainAccessError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,8 @@
 				A3C58A3124E4515F0076B8B5 /* Info.plist */,
 				A3C58A4724E454130076B8B5 /* Authentication.swift */,
 				A3C58A4924E456FC0076B8B5 /* AuthenticationRepository.swift */,
+				A3C58A4B24E45FB50076B8B5 /* KeychainAccess.swift */,
+				A3C58A4D24E45FBF0076B8B5 /* KeychainAccessError.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -199,7 +205,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3C58A4E24E45FBF0076B8B5 /* KeychainAccessError.swift in Sources */,
 				A3C58A4824E454130076B8B5 /* Authentication.swift in Sources */,
+				A3C58A4C24E45FB50076B8B5 /* KeychainAccess.swift in Sources */,
 				A3C58A4A24E456FC0076B8B5 /* AuthenticationRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
