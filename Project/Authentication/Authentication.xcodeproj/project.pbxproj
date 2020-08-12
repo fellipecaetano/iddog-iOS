@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		A3C58A3724E4515F0076B8B5 /* Authentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C58A2D24E4515F0076B8B5 /* Authentication.framework */; };
 		A3C58A3E24E4515F0076B8B5 /* Authentication.h in Headers */ = {isa = PBXBuildFile; fileRef = A3C58A3024E4515F0076B8B5 /* Authentication.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A3C58A4824E454130076B8B5 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C58A4724E454130076B8B5 /* Authentication.swift */; };
+		A3C58A4A24E456FC0076B8B5 /* AuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C58A4924E456FC0076B8B5 /* AuthenticationRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +29,8 @@
 		A3C58A3124E4515F0076B8B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3C58A3624E4515F0076B8B5 /* AuthenticationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AuthenticationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3C58A3D24E4515F0076B8B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3C58A4724E454130076B8B5 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		A3C58A4924E456FC0076B8B5 /* AuthenticationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,8 @@
 			children = (
 				A3C58A3024E4515F0076B8B5 /* Authentication.h */,
 				A3C58A3124E4515F0076B8B5 /* Info.plist */,
+				A3C58A4724E454130076B8B5 /* Authentication.swift */,
+				A3C58A4924E456FC0076B8B5 /* AuthenticationRepository.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -145,6 +151,7 @@
 				TargetAttributes = {
 					A3C58A2C24E4515F0076B8B5 = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 					};
 					A3C58A3524E4515F0076B8B5 = {
 						CreatedOnToolsVersion = 11.3.1;
@@ -192,6 +199,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3C58A4824E454130076B8B5 /* Authentication.swift in Sources */,
+				A3C58A4A24E456FC0076B8B5 /* AuthenticationRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +345,7 @@
 		A3C58A4224E4515F0076B8B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 8Q86GGRUX8;
@@ -354,6 +364,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.fellipecaetano.iddog.Authentication;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -362,6 +373,7 @@
 		A3C58A4324E4515F0076B8B5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 8Q86GGRUX8;
@@ -388,6 +400,7 @@
 		A3C58A4524E4515F0076B8B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8Q86GGRUX8;
 				INFOPLIST_FILE = Tests/Info.plist;
@@ -406,6 +419,7 @@
 		A3C58A4624E4515F0076B8B5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8Q86GGRUX8;
 				INFOPLIST_FILE = Tests/Info.plist;
