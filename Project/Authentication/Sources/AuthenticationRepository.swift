@@ -7,7 +7,7 @@ public struct AuthenticationRepository {
         case notAuthenticated
         case unhandledError(Swift.Error)
     }
-    
+
     public let get: () throws -> Authentication
     public let put: (Authentication) throws -> Void
 

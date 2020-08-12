@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Podfile">
+   </FileRef>
+   <FileRef
+      location = "group:swiftgen.yml">
+   </FileRef>
+   <FileRef
       location = "group:Authentication/Authentication.xcodeproj">
    </FileRef>
    <FileRef
@@ -12,12 +18,6 @@
    </FileRef>
    <FileRef
       location = "group:Streams/Streams.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Podfile">
-   </FileRef>
-   <FileRef
-      location = "group:swiftgen.yml">
    </FileRef>
    <FileRef
       location = "group:Application/Application.xcodeproj">
