@@ -7,11 +7,10 @@ public struct AuthenticationRepository {
 
     public static let live = AuthenticationRepository(
         get: {
-            return Authentication(email: "", token: "")
+            Authentication(email: "", token: "")
         },
-        put: { authentication in
+        put: { _ in
         },
-        delete: {
-        }
+        delete: {}
     )
 }
