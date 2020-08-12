@@ -1,21 +1,21 @@
 import Security
 
-public struct KeychainAccess {
-    public enum Error: Swift.Error, Equatable {
+struct KeychainAccess {
+    enum Error: Swift.Error, Equatable {
         case couldNotEncodeAsData(value: String)
         case unhandledError(status: OSStatus)
         case noPassword
         case unexpectedPasswordData
     }
 
-    public struct Credentials: Equatable {
-        public let account: String
-        public let password: String
+    struct Credentials: Equatable {
+        let account: String
+        let password: String
     }
 
     private let server: String
 
-    public init(server: String) {
+    init(server: String) {
         self.server = server
     }
 
