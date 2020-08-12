@@ -1,5 +1,3 @@
-import Security
-
 private let keychain = KeychainAccess(server: "iddog-nrizncxqba-uc.a.run.app")
 
 public struct AuthenticationRepository {
