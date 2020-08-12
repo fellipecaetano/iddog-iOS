@@ -1,5 +1,6 @@
 import Streams
 
+@available(iOS 10.0, *)
 extension Effect {
     func timed(interval: TimeInterval, repeats: Bool) -> Self {
         return Effect.run { handler in

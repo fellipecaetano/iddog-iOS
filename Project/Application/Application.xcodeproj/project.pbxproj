@@ -21,6 +21,8 @@
 		A382C6A824E33915009EF2F8 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A382C6A524E3390B009EF2F8 /* Networking.framework */; };
 		A382C6C024E34479009EF2F8 /* Streams.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A382C6BD24E34471009EF2F8 /* Streams.framework */; };
 		A3C58A5C24E468EF0076B8B5 /* Authentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C58A5524E468E80076B8B5 /* Authentication.framework */; };
+		A3C58A5F24E4A4190076B8B5 /* SignUpRedux.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C58A5E24E4A4190076B8B5 /* SignUpRedux.swift */; };
+		A3C58A6924E4A4300076B8B5 /* Redux.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C58A6624E4A4280076B8B5 /* Redux.framework */; };
 		E0576717116519E922E27288 /* Pods_Application.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9100A121CF07C8907AB9B43D /* Pods_Application.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +76,20 @@
 			remoteGlobalIDString = A3C58A3624E4515F0076B8B5;
 			remoteInfo = AuthenticationTests;
 		};
+		A3C58A6524E4A4280076B8B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A3C58A6024E4A4280076B8B5 /* Redux.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A382C61D24E240A4009EF2F8;
+			remoteInfo = Redux;
+		};
+		A3C58A6724E4A4280076B8B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A3C58A6024E4A4280076B8B5 /* Redux.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A382C62624E240A4009EF2F8;
+			remoteInfo = ReduxTests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +116,8 @@
 		A382C69F24E3390B009EF2F8 /* Networking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Networking.xcodeproj; path = ../Networking/Networking.xcodeproj; sourceTree = "<group>"; };
 		A382C6B524E34471009EF2F8 /* Streams.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Streams.xcodeproj; path = ../Streams/Streams.xcodeproj; sourceTree = "<group>"; };
 		A3C58A4F24E468E70076B8B5 /* Authentication.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Authentication.xcodeproj; path = ../Authentication/Authentication.xcodeproj; sourceTree = "<group>"; };
+		A3C58A5E24E4A4190076B8B5 /* SignUpRedux.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRedux.swift; sourceTree = "<group>"; };
+		A3C58A6024E4A4280076B8B5 /* Redux.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Redux.xcodeproj; path = ../Redux/Redux.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3C58A6924E4A4300076B8B5 /* Redux.framework in Frameworks */,
 				A3C58A5C24E468EF0076B8B5 /* Authentication.framework in Frameworks */,
 				A382C6C024E34479009EF2F8 /* Streams.framework in Frameworks */,
 				A382C6A824E33915009EF2F8 /* Networking.framework in Frameworks */,
@@ -150,13 +169,12 @@
 		A382C5B824E1C07E009EF2F8 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				A3C58A5D24E4A3160076B8B5 /* SignUp */,
 				A382C5E224E1EBE8009EF2F8 /* Strings+Generated.swift */,
 				A382C5B924E1C07E009EF2F8 /* AppDelegate.swift */,
-				A382C5BD24E1C07E009EF2F8 /* SignUpViewController.swift */,
 				A382C5C224E1C07F009EF2F8 /* Assets.xcassets */,
 				A382C5C424E1C07F009EF2F8 /* LaunchScreen.storyboard */,
 				A382C5C724E1C07F009EF2F8 /* Info.plist */,
-				A382C5DB24E1D576009EF2F8 /* SignUpView.swift */,
 				A37C6E5924E3A2DD00C7FBED /* FeedViewController.swift */,
 				A37C6E5B24E3A30200C7FBED /* FeedView.swift */,
 			);
@@ -191,6 +209,7 @@
 		A382C69E24E33903009EF2F8 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				A3C58A6024E4A4280076B8B5 /* Redux.xcodeproj */,
 				A3C58A4F24E468E70076B8B5 /* Authentication.xcodeproj */,
 				A382C6B524E34471009EF2F8 /* Streams.xcodeproj */,
 				A382C69F24E3390B009EF2F8 /* Networking.xcodeproj */,
@@ -221,6 +240,25 @@
 			children = (
 				A3C58A5524E468E80076B8B5 /* Authentication.framework */,
 				A3C58A5724E468E80076B8B5 /* AuthenticationTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A3C58A5D24E4A3160076B8B5 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				A382C5BD24E1C07E009EF2F8 /* SignUpViewController.swift */,
+				A382C5DB24E1D576009EF2F8 /* SignUpView.swift */,
+				A3C58A5E24E4A4190076B8B5 /* SignUpRedux.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		A3C58A6124E4A4280076B8B5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A3C58A6624E4A4280076B8B5 /* Redux.framework */,
+				A3C58A6824E4A4280076B8B5 /* ReduxTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -327,6 +365,10 @@
 					ProjectRef = A382C69F24E3390B009EF2F8 /* Networking.xcodeproj */;
 				},
 				{
+					ProductGroup = A3C58A6124E4A4280076B8B5 /* Products */;
+					ProjectRef = A3C58A6024E4A4280076B8B5 /* Redux.xcodeproj */;
+				},
+				{
 					ProductGroup = A382C6B624E34471009EF2F8 /* Products */;
 					ProjectRef = A382C6B524E34471009EF2F8 /* Streams.xcodeproj */;
 				},
@@ -380,6 +422,20 @@
 			fileType = wrapper.cfbundle;
 			path = AuthenticationTests.xctest;
 			remoteRef = A3C58A5624E468E80076B8B5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A3C58A6624E4A4280076B8B5 /* Redux.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Redux.framework;
+			remoteRef = A3C58A6524E4A4280076B8B5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A3C58A6824E4A4280076B8B5 /* ReduxTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ReduxTests.xctest;
+			remoteRef = A3C58A6724E4A4280076B8B5 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -477,6 +533,7 @@
 				A382C5BA24E1C07E009EF2F8 /* AppDelegate.swift in Sources */,
 				A37C6E5A24E3A2DD00C7FBED /* FeedViewController.swift in Sources */,
 				A382C5E324E1EBE9009EF2F8 /* Strings+Generated.swift in Sources */,
+				A3C58A5F24E4A4190076B8B5 /* SignUpRedux.swift in Sources */,
 				A37C6E5C24E3A30200C7FBED /* FeedView.swift in Sources */,
 				A382C5DC24E1D576009EF2F8 /* SignUpView.swift in Sources */,
 			);
