@@ -9,7 +9,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = SignInViewController()
+        window?.rootViewController = SignUpViewController()
         window?.makeKeyAndVisible()
         return true
     }

@@ -17,9 +17,6 @@
       location = "group:swiftgen.yml">
    </FileRef>
    <FileRef
-      location = "group:swift-format.json">
-   </FileRef>
-   <FileRef
       location = "group:Application/Application.xcodeproj">
    </FileRef>
    <FileRef

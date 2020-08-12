@@ -2,16 +2,16 @@ import Networking
 import Streams
 import UIKit
 
-class SignInViewController: UIViewController {
+class SignUpViewController: UIViewController {
     private let disposeBag = DisposeBag()
 
     override func loadView() {
-        view = SignInView()
+        view = SignUpView()
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        smartView.signInButton.addTarget(self, action: #selector(signIn), for: .touchUpInside)
+        smartView.signUpButton.addTarget(self, action: #selector(signIn), for: .touchUpInside)
     }
 
     @objc private func signIn() {
@@ -28,8 +28,8 @@ class SignInViewController: UIViewController {
     }
 }
 
-extension SignInViewController {
-    fileprivate var smartView: SignInView! {
-        return view as? SignInView
+extension SignUpViewController {
+    fileprivate var smartView: SignUpView! {
+        return view as? SignUpView
     }
 }

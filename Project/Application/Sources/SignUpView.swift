@@ -1,6 +1,6 @@
 import UIKit
 
-final class SignInView: UIView {
+final class SignUpView: UIView {
     let emailTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = L10n.email
@@ -14,9 +14,9 @@ final class SignInView: UIView {
         return textField
     }()
 
-    let signInButton: UIButton = {
+    let signUpButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle(L10n.signIn, for: [])
+        button.setTitle(L10n.signUp, for: [])
         return button
     }()
 
@@ -41,7 +41,7 @@ final class SignInView: UIView {
 
     private func createHierarchy() {
         addSubview(emailTextField)
-        addSubview(signInButton)
+        addSubview(signUpButton)
     }
 
     private func createConstraints() {
@@ -57,12 +57,12 @@ final class SignInView: UIView {
             ])
 
         // signInButton
-        signInButton.translatesAutoresizingMaskIntoConstraints = false
+        signUpButton.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate(
             [
-                signInButton.centerXAnchor.constraint(equalTo: emailTextField.centerXAnchor),
-                signInButton.topAnchor.constraint(
+                signUpButton.centerXAnchor.constraint(equalTo: emailTextField.centerXAnchor),
+                signUpButton.topAnchor.constraint(
                     equalTo: emailTextField.bottomAnchor, constant: layoutMargins.bottom * 3
                 ),
             ])
