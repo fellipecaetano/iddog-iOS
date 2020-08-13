@@ -3,12 +3,19 @@ import Redux
 
 let authReducer = Reducer<AuthenticationState, AuthenticationAction, AuthenticationEnvironment> { state, action, environment in
     switch action {
-    case let .signUp(.succeed(authentication)):
+    case let .authenticate(authentication):
         state.authentication = authentication
+
+        return Effect.fireAndForget {
+            do {
+                try environment.repository.put(authentication)
+            } catch {
+                print(error)
+            }
+        }
     default:
-        break
+        return Effect.empty
     }
-    return Effect.empty
 }
 
 struct AuthenticationState: Equatable {
@@ -16,7 +23,7 @@ struct AuthenticationState: Equatable {
 }
 
 enum AuthenticationAction: Equatable {
-    case signUp(SignUpAction)
+    case authenticate(Authentication)
 }
 
 struct AuthenticationEnvironment {
