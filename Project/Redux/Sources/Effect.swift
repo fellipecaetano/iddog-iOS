@@ -3,7 +3,7 @@ import Streams
 public struct Effect<Value>: Observable {
     private let observable: AnyObservable<Value>
 
-    init(observable: AnyObservable<Value>) {
+    public init(observable: AnyObservable<Value>) {
         self.observable = observable
     }
 
