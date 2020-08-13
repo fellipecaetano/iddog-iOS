@@ -1,19 +1,25 @@
 import Authentication
 import Networking
 import Redux
+import Streams
 
 let signUpReducer = Reducer<SignUpState, SignUpAction, SignUpEnvironment> { state, action, environment in
     switch action {
     case let .signUp(email):
-        state.isInProgress = false
+        state.isInProgress = true
 
         return environment.apiClient.signUp(email)
-            .map { result in
+            .flatMap { result in
                 switch result {
                 case let .success(response):
-                    return SignUpAction.succeed(auth: Authentication(email: response.user.email, token: response.user.token))
+                    let auth = Authentication(email: response.user.email, token: response.user.token)
+
+                    return Observables.of(
+                        SignUpAction.succeed(auth: auth),
+                        SignUpAction.authentication(.authenticate(auth))
+                    )
                 case .failure:
-                    return SignUpAction.fail
+                    return Observables.just(SignUpAction.fail)
                 }
             }
             .eraseToEffect()
@@ -22,6 +28,8 @@ let signUpReducer = Reducer<SignUpState, SignUpAction, SignUpEnvironment> { stat
         return Effect.empty
     case .fail:
         state.isInProgress = false
+        return Effect.empty
+    case .authentication:
         return Effect.empty
     }
 }
@@ -33,6 +41,7 @@ struct SignUpState: Equatable {
 enum SignUpAction: Equatable {
     case signUp(email: String)
     case succeed(auth: Authentication)
+    case authentication(AuthenticationAction)
     case fail
 }
 

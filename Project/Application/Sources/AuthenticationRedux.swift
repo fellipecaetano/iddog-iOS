@@ -13,8 +13,6 @@ let authReducer = Reducer<AuthenticationState, AuthenticationAction, Authenticat
                 print(error)
             }
         }
-    default:
-        return Effect.empty
     }
 }
 
