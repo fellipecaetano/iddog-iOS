@@ -14,7 +14,7 @@ public final class Store<State: Equatable, Action, Environment>: Observable, Obs
     private let subject = Subject<State>()
     private var effectDisposables: [UUID: Disposable] = [:]
 
-    init(initialState: State, reducer: Reducer<State, Action, Environment>, environment: Environment) {
+    public init(initialState: State, reducer: Reducer<State, Action, Environment>, environment: Environment) {
         state = initialState
         self.reducer = reducer
         self.environment = environment
