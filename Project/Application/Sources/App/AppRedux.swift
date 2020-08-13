@@ -15,6 +15,8 @@ enum AppAction: Equatable {
         switch self {
         case let .authentication(action):
             return action
+        case let .signUp(.authentication(action)):
+            return action
         default:
             return nil
         }
