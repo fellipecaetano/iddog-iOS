@@ -12,6 +12,14 @@ extension Observable {
             }
         }
     }
+    
+    public func flatMap<T>(_ fn: @escaping (SubscribedValue) -> AnyObservable<T>) -> AnyObservable<T> {
+        return AnyObservable { onComplete in
+            self.subscribe { value in
+                return fn(value).subscribe(onComplete)
+            }
+        }
+    }
 
     public func eraseToObservable() -> AnyObservable<SubscribedValue> {
         return AnyObservable(subscribe)

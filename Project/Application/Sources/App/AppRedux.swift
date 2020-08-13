@@ -17,7 +17,7 @@ let store = Store<AppState, AppAction, AppEnvironment>(
             fromAction: AppAction.signUp,
             environment: { $0.signUpEnvironment}
         )
-    ),
+    ).debug(),
     environment: AppEnvironment(
         apiClient: APIClient.live,
         authRepository: AuthenticationRepository.live

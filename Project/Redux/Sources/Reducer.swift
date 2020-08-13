@@ -31,18 +31,20 @@ public struct Reducer<State, Action, Environment> {
     public static func combine(_ reducers: Reducer...) -> Reducer {
         return Self { state, action, environment in
             let effects: [Effect<Action>] = reducers.map { $0.reduce(&state, action, environment) }
+            return Observables.merge(effects).eraseToEffect()
+        }
+    }
+    
+    public func debug() -> Reducer {
+        return .init { state, action, environment in
+            let immutableState = state
 
-            return AnyObservable<Action> { onComplete in
-                let disposables = effects.map { effect in
-                    effect.subscribe(onComplete)
+            return Observables.merge([
+                self.reduce(&state, action, environment),
+                Effect.fireAndForget {
+                    print("Current state: \(immutableState); emitted action: \(action)")
                 }
-
-                return Disposable {
-                    for disposable in disposables {
-                        disposable.dispose()
-                    }
-                }
-            }
+            ])
             .eraseToEffect()
         }
     }

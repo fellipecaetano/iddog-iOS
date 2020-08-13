@@ -16,6 +16,7 @@
 		A382C61224E23F01009EF2F8 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A382C61124E23F01009EF2F8 /* Observer.swift */; };
 		A382C6B224E34001009EF2F8 /* DisposeBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = A382C6B124E34001009EF2F8 /* DisposeBag.swift */; };
 		A382C6B424E34070009EF2F8 /* DisposeBagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A382C6B324E34070009EF2F8 /* DisposeBagTests.swift */; };
+		A3C58A7F24E5AA280076B8B5 /* Observables.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C58A7E24E5AA280076B8B5 /* Observables.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,7 @@
 		A382C61124E23F01009EF2F8 /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
 		A382C6B124E34001009EF2F8 /* DisposeBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisposeBag.swift; sourceTree = "<group>"; };
 		A382C6B324E34070009EF2F8 /* DisposeBagTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisposeBagTests.swift; sourceTree = "<group>"; };
+		A3C58A7E24E5AA280076B8B5 /* Observables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observables.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				A382C60D24E23C04009EF2F8 /* Disposable.swift */,
 				A382C6B124E34001009EF2F8 /* DisposeBag.swift */,
 				A382C60F24E23CDE009EF2F8 /* Observable.swift */,
+				A3C58A7E24E5AA280076B8B5 /* Observables.swift */,
 				A382C61124E23F01009EF2F8 /* Observer.swift */,
 			);
 			path = Sources;
@@ -216,6 +219,7 @@
 			files = (
 				A382C60924E23A14009EF2F8 /* Subject.swift in Sources */,
 				A382C61224E23F01009EF2F8 /* Observer.swift in Sources */,
+				A3C58A7F24E5AA280076B8B5 /* Observables.swift in Sources */,
 				A382C61024E23CDE009EF2F8 /* Observable.swift in Sources */,
 				A382C6B224E34001009EF2F8 /* DisposeBag.swift in Sources */,
 				A382C60E24E23C04009EF2F8 /* Disposable.swift in Sources */,

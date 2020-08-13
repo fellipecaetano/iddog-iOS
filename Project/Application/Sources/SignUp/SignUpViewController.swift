@@ -23,22 +23,7 @@ class SignUpViewController: UIViewController {
     }
 
     @objc private func signIn() {
-        APIClient.live.signUp(smartView.emailTextField.text ?? "")
-            .subscribe { result in
-                switch result {
-                case let .success(response):
-                    let authentication = Authentication(email: response.user.email, token: response.user.token)
-
-                    do {
-                        try AuthenticationRepository.live.put(authentication)
-                    } catch {
-                        print(error)
-                    }
-                case let .failure(error):
-                    print(error.localizedDescription)
-                }
-            }
-            .disposed(by: disposeBag)
+        store.emit(.signUp(.signUp(email: smartView.emailTextField.text ?? "")))
     }
 }
 
