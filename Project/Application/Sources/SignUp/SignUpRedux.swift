@@ -10,8 +10,8 @@ let signUpReducer = Reducer<SignUpState, SignUpAction, SignUpEnvironment> { stat
         return environment.apiClient.signUp(email)
             .map { result in
                 switch result {
-                case .success:
-                    return SignUpAction.succeed
+                case let .success(response):
+                    return SignUpAction.succeed(auth: Authentication(email: response.user.email, token: response.user.token))
                 case .failure:
                     return SignUpAction.fail
                 }
@@ -32,7 +32,7 @@ struct SignUpState: Equatable {
 
 enum SignUpAction: Equatable {
     case signUp(email: String)
-    case succeed
+    case succeed(auth: Authentication)
     case fail
 }
 

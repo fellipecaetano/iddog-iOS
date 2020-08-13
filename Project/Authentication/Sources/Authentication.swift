@@ -1,4 +1,4 @@
-public struct Authentication {
+public struct Authentication: Equatable {
     public let email: String
     public let token: String
 
