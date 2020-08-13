@@ -15,8 +15,16 @@ extension Observable {
     
     public func flatMap<T>(_ fn: @escaping (SubscribedValue) -> AnyObservable<T>) -> AnyObservable<T> {
         return AnyObservable { onComplete in
-            self.subscribe { value in
-                return fn(value).subscribe(onComplete)
+            var thisDisposable: Disposable?
+            var transformedObservableDisposable: Disposable?
+
+            thisDisposable = self.subscribe { value in
+                transformedObservableDisposable = fn(value).subscribe(onComplete)
+            }
+
+            return Disposable {
+                thisDisposable?.dispose()
+                transformedObservableDisposable?.dispose()
             }
         }
     }

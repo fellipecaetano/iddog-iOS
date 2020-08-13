@@ -35,4 +35,38 @@ public final class Store<State: Equatable, Action, Environment>: Observable, Obs
         }
         effectDisposables[uuid] = disposable
     }
+
+    public func scope<LocalState, LocalAction>(
+        toLocalState: @escaping (State) -> LocalState,
+        fromLocalAction: @escaping (LocalAction) -> Action
+    ) -> AnyStore<LocalState, LocalAction> {
+        return AnyStore(
+            subscribe: { onComplete in
+                return self.subscribe { state in
+                    onComplete(toLocalState(state))
+                }
+            },
+            emit: { action in
+                self.emit(fromLocalAction(action))
+            }
+        )
+    }
+}
+
+public struct AnyStore<State, Action>: Observable, Observer {
+    private let _subscribe: (@escaping (State) -> Void) -> Disposable
+    private let _emit: (Action) -> Void
+
+    public init(subscribe: @escaping (@escaping (State) -> Void) -> Disposable, emit: @escaping (Action) -> Void) {
+        _subscribe = subscribe
+        _emit = emit
+    }
+
+    public func subscribe(_ handler: @escaping (State) -> Void) -> Disposable {
+        return _subscribe(handler)
+    }
+
+    public func emit(_ value: Action) {
+        _emit(value)
+    }
 }

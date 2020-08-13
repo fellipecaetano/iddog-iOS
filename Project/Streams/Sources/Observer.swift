@@ -13,7 +13,7 @@ extension Observer {
 public struct AnyObserver<T>: Observer {
     private let _emit: (T) -> Void
 
-    init(_ emit: @escaping (T) -> Void) {
+    public init(_ emit: @escaping (T) -> Void) {
         _emit = emit
     }
 
