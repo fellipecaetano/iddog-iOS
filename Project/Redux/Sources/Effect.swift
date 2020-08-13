@@ -3,8 +3,8 @@ import Streams
 public struct Effect<Value>: Observable {
     private let observable: AnyObservable<Value>
 
-    public init(observable: AnyObservable<Value>) {
-        self.observable = observable
+    public init<O: Observable>(observable: O) where O.SubscribedValue == Value {
+        self.observable = observable.eraseToObservable()
     }
 
     public func subscribe(_ handler: @escaping (Value) -> Void) -> Disposable {
@@ -20,5 +20,11 @@ public struct Effect<Value>: Observable {
         return Effect.run { _ in
             Disposable.none
         }
+    }
+}
+
+public extension Observable {
+    func eraseToEffect() -> Effect<SubscribedValue> {
+        return Effect(observable: self)
     }
 }

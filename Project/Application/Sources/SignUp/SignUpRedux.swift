@@ -1,6 +1,30 @@
-import Redux
-import Networking
 import Authentication
+import Networking
+import Redux
+
+let signUpReducer = Reducer<SignUpState, SignUpAction, SignUpEnvironment> { state, action, environment in
+    switch action {
+    case let .signUp(email):
+        state.isInProgress = false
+
+        return environment.apiClient.signUp(email)
+            .map { result in
+                switch result {
+                case .success:
+                    return SignUpAction.succeed
+                case .failure:
+                    return SignUpAction.fail
+                }
+            }
+            .eraseToEffect()
+    case .succeed:
+        state.isInProgress = false
+        return Effect.empty
+    case .fail:
+        state.isInProgress = false
+        return Effect.empty
+    }
+}
 
 struct SignUpState: Equatable {
     var isInProgress = false

@@ -5,7 +5,15 @@ public protocol Observable {
 }
 
 extension Observable {
-    public func erase() -> AnyObservable<SubscribedValue> {
+    public func map<T>(_ fn: @escaping (SubscribedValue) -> T) -> AnyObservable<T> {
+        return AnyObservable { onComplete in
+            self.subscribe { value in
+                onComplete(fn(value))
+            }
+        }
+    }
+
+    public func eraseToObservable() -> AnyObservable<SubscribedValue> {
         return AnyObservable(subscribe)
     }
 }

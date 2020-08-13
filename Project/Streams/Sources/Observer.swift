@@ -5,7 +5,7 @@ public protocol Observer {
 }
 
 extension Observer {
-    public func erase() -> AnyObserver<EmittedValue> {
+    public func eraseToObserver() -> AnyObserver<EmittedValue> {
         return AnyObserver(emit)
     }
 }
