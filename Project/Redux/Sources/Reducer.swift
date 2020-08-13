@@ -7,10 +7,10 @@ public struct Reducer<State, Action, Environment> {
         self.reduce = reduce
     }
 
-    func pullback<GlobalState, GlobalAction, GlobalEnvironment>(
+    public func pullback<GlobalState, GlobalAction, GlobalEnvironment>(
         state toLocalState: WritableKeyPath<GlobalState, State>,
-        toLocalAction: @escaping (GlobalAction) -> Action?,
-        fromLocalAction: @escaping (Action) -> GlobalAction,
+        toAction toLocalAction: @escaping (GlobalAction) -> Action?,
+        fromAction fromLocalAction: @escaping (Action) -> GlobalAction,
         environment toLocalEnvironment: @escaping (GlobalEnvironment) -> Environment
     ) -> Reducer<GlobalState, GlobalAction, GlobalEnvironment> {
         return Reducer<GlobalState, GlobalAction, GlobalEnvironment> { globalState, globalAction, globalEnvironment in
@@ -28,7 +28,7 @@ public struct Reducer<State, Action, Environment> {
         }
     }
 
-    static func combine(_ reducers: Reducer...) -> Reducer {
+    public static func combine(_ reducers: Reducer...) -> Reducer {
         return Self { state, action, environment in
             let effects: [Effect<Action>] = reducers.map { $0.reduce(&state, action, environment) }
 

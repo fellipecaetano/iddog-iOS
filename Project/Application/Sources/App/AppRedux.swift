@@ -4,12 +4,14 @@ import Authentication
 
 let store = Store<AppState, AppAction, AppEnvironment>(
     initialState: AppState(),
-    reducer: Reducer { state, action, environment in
-        switch action {
-        case let .signUp(signUpAction):
-            return Effect.empty
-        }
-    },
+    reducer: Reducer.combine(
+        signUpReducer.pullback(
+            state: \AppState.signUp,
+            toAction: { $0.signUpAction },
+            fromAction: AppAction.signUp,
+            environment: { $0.signUpEnvironment
+        })
+    ),
     environment: AppEnvironment(
         apiClient: APIClient.live,
         authRepository: AuthenticationRepository.live
@@ -22,6 +24,13 @@ struct AppState: Equatable {
 
 enum AppAction: Equatable {
     case signUp(SignUpAction)
+    
+    var signUpAction: SignUpAction? {
+        switch self {
+        case let .signUp(action):
+            return action
+        }
+    }
 }
 
 struct AppEnvironment {
