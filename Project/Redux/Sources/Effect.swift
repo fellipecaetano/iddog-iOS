@@ -21,6 +21,13 @@ public struct Effect<Value>: Observable {
             Disposable.none
         }
     }
+
+    public static func fireAndForget(_ work: @escaping () -> Void) -> Effect {
+        return Effect.run { _ in
+            work()
+            return Disposable.none
+        }
+    }
 }
 
 public extension Observable {
