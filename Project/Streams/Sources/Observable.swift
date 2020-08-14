@@ -5,6 +5,10 @@ public protocol Observable {
 }
 
 extension Observable {
+    public func bind<O: Observer>(to observer: O) -> Disposable where O.EmittedValue == SubscribedValue {
+        return subscribe(observer.emit)
+    }
+
     public func map<T>(_ fn: @escaping (SubscribedValue) -> T) -> AnyObservable<T> {
         return AnyObservable { onComplete in
             self.subscribe { value in
