@@ -10,7 +10,7 @@ struct AppState: Equatable {
 enum AppAction: Equatable {
     case authentication(AuthenticationAction)
     case signUp(SignUpAction)
-    
+
     var authenticationAction: AuthenticationAction? {
         switch self {
         case let .authentication(action):
@@ -35,9 +35,10 @@ enum AppAction: Equatable {
 struct AppEnvironment {
     let apiClient: APIClient
     let authRepository: AuthenticationRepository
+    let log: (Any) -> Void
     
     var authEnvironment: AuthenticationEnvironment {
-        return AuthenticationEnvironment(repository: authRepository)
+        return AuthenticationEnvironment(repository: authRepository, log: log)
     }
 
     var signUpEnvironment: SignUpEnvironment {

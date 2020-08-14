@@ -26,6 +26,11 @@ class SignUpViewController: UIViewController {
         smartView.signUpButton.addTarget(self, action: #selector(signIn), for: .touchUpInside)
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+
     @objc private func signIn() {
         let email = smartView.emailTextField.text ?? ""
         store.emit(.signUp(email: email))

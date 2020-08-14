@@ -10,7 +10,7 @@ let authReducer = Reducer<AuthenticationState, AuthenticationAction, Authenticat
                 let authentication = try environment.repository.get()
                 onComplete(AuthenticationAction.write(authentication))
             } catch {
-                print(error)
+                environment.log(error)
             }
 
             return Disposable.none
@@ -27,7 +27,7 @@ let authReducer = Reducer<AuthenticationState, AuthenticationAction, Authenticat
             do {
                 try environment.repository.put(authentication)
             } catch {
-                print(error)
+                environment.log(error)
             }
         }
     }
@@ -45,4 +45,5 @@ enum AuthenticationAction: Equatable {
 
 struct AuthenticationEnvironment {
     let repository: AuthenticationRepository
+    let log: (Any) -> Void
 }

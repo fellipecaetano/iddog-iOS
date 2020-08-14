@@ -25,6 +25,7 @@
 		A3C58A6924E4A4300076B8B5 /* Redux.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C58A6624E4A4280076B8B5 /* Redux.framework */; };
 		A3C58A7B24E5945A0076B8B5 /* AppRedux.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C58A7A24E5945A0076B8B5 /* AppRedux.swift */; };
 		A3C58A7D24E59F150076B8B5 /* AuthenticationRedux.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C58A7C24E59F150076B8B5 /* AuthenticationRedux.swift */; };
+		A3C58A8124E6F9E60076B8B5 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C58A8024E6F9E60076B8B5 /* AppCoordinator.swift */; };
 		E0576717116519E922E27288 /* Pods_Application.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9100A121CF07C8907AB9B43D /* Pods_Application.framework */; };
 /* End PBXBuildFile section */
 
@@ -122,6 +123,7 @@
 		A3C58A6024E4A4280076B8B5 /* Redux.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Redux.xcodeproj; path = ../Redux/Redux.xcodeproj; sourceTree = "<group>"; };
 		A3C58A7A24E5945A0076B8B5 /* AppRedux.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRedux.swift; sourceTree = "<group>"; };
 		A3C58A7C24E59F150076B8B5 /* AuthenticationRedux.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRedux.swift; sourceTree = "<group>"; };
+		A3C58A8024E6F9E60076B8B5 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -281,6 +283,7 @@
 			children = (
 				A382C5B924E1C07E009EF2F8 /* AppDelegate.swift */,
 				A3C58A7A24E5945A0076B8B5 /* AppRedux.swift */,
+				A3C58A8024E6F9E60076B8B5 /* AppCoordinator.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -561,6 +564,7 @@
 			files = (
 				A382C5BE24E1C07E009EF2F8 /* SignUpViewController.swift in Sources */,
 				A382C5BA24E1C07E009EF2F8 /* AppDelegate.swift in Sources */,
+				A3C58A8124E6F9E60076B8B5 /* AppCoordinator.swift in Sources */,
 				A3C58A7D24E59F150076B8B5 /* AuthenticationRedux.swift in Sources */,
 				A3C58A7B24E5945A0076B8B5 /* AppRedux.swift in Sources */,
 				A37C6E5A24E3A2DD00C7FBED /* FeedViewController.swift in Sources */,
