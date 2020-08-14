@@ -22,8 +22,9 @@ public struct Effect<Value>: Observable {
         return Effect<T>(observable: observable)
     }
 
-    public static func fireAndForget<T>(_ work: @escaping (T) -> Void) -> Effect {
+    public static func fireAndForget(_ work: @escaping () -> Void) -> Effect {
         return Effect.run { _ in
+            work()
             return Disposable.none
         }
     }
