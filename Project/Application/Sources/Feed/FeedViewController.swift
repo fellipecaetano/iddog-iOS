@@ -35,6 +35,16 @@ final class FeedViewController: UIViewController {
             self.smartView.collectionView.reloadData()
         }
         .disposed(by: disposeBag)
+        
+        store
+            .map { $0.isLoading }
+            .bind(to: smartView.activityIndicatorView.streams.isAnimating)
+            .disposed(by: disposeBag)
+
+        store
+            .map { $0.isLoading }
+            .bind(to: smartView.collectionView.streams.isHidden)
+            .disposed(by: disposeBag)
     }
 
     @objc private func reloadCategory(sender segmentedControl: UISegmentedControl) {

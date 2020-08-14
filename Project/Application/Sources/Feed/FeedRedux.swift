@@ -7,6 +7,7 @@ let feedReducer = Reducer<AppState, FeedAction, FeedEnvironment> { state, action
     switch action {
     case let .load(category):
         state.feed.category = category
+        state.feed.isLoading = true
 
         guard let authentication = state.authentication.authentication else {
             return Effect.empty
@@ -26,12 +27,14 @@ let feedReducer = Reducer<AppState, FeedAction, FeedEnvironment> { state, action
 
     case let .receive(images):
         state.feed.images = images
+        state.feed.isLoading = false
         return Effect.empty
     }
 }
 
 struct FeedState: Equatable {
     var category = FeedCategory.husky
+    var isLoading = false
     var images = [URL]()
 }
 

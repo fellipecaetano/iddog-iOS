@@ -1,35 +1,34 @@
 import UIKit
 
 extension UIView {
-    var safeTopAnchor: NSLayoutYAxisAnchor {
+    var safeAreaAnchors: SafeAreaLayoutAnchors {
         if #available(iOS 11.0, *) {
-            return safeAreaLayoutGuide.topAnchor
+            return SafeAreaLayoutAnchors(
+                top: safeAreaLayoutGuide.topAnchor,
+                bottom: safeAreaLayoutGuide.bottomAnchor,
+                centerY: safeAreaLayoutGuide.centerYAnchor,
+                leading: safeAreaLayoutGuide.leadingAnchor,
+                trailing: safeAreaLayoutGuide.trailingAnchor,
+                centerX: safeAreaLayoutGuide.centerXAnchor
+            )
         } else {
-            return topAnchor
+            return SafeAreaLayoutAnchors(
+                top: topAnchor,
+                bottom: bottomAnchor,
+                centerY: centerYAnchor,
+                leading: leadingAnchor,
+                trailing: trailingAnchor,
+                centerX: centerXAnchor
+            )
         }
     }
+}
 
-    var safeBottomAnchor: NSLayoutYAxisAnchor {
-        if #available(iOS 11.0, *) {
-            return safeAreaLayoutGuide.bottomAnchor
-        } else {
-            return bottomAnchor
-        }
-    }
-
-    var safeLeadingAnchor: NSLayoutXAxisAnchor {
-        if #available(iOS 11.0, *) {
-            return safeAreaLayoutGuide.leadingAnchor
-        } else {
-            return leadingAnchor
-        }
-    }
-
-    var safeTrailingAnchor: NSLayoutXAxisAnchor {
-        if #available(iOS 11.0, *) {
-            return safeAreaLayoutGuide.trailingAnchor
-        } else {
-            return trailingAnchor
-        }
-    }
+struct SafeAreaLayoutAnchors {
+    let top: NSLayoutYAxisAnchor
+    let bottom: NSLayoutYAxisAnchor
+    let centerY: NSLayoutYAxisAnchor
+    let leading: NSLayoutXAxisAnchor
+    let trailing: NSLayoutXAxisAnchor
+    let centerX: NSLayoutXAxisAnchor
 }
