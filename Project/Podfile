@@ -10,7 +10,7 @@ target 'Application' do
   project 'Application/Application.xcodeproj/'
   
   pod 'Alamofire', '~> 4.9'
-  pod 'Kingfisher', :inhibit_warnings => true
+  pod 'Kingfisher', '~> 4.10', :inhibit_warnings => true
 
   target 'ApplicationTests' do
     inherit! :search_paths
