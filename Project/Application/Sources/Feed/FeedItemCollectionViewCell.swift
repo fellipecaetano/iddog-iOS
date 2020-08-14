@@ -1,6 +1,9 @@
 import UIKit
+import Kingfisher
 
 final class FeedItemCollectionViewCell: UICollectionViewCell, Reusable {
+    private var imageDownloadTask: RetrieveImageTask?
+    
     private let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
@@ -43,20 +46,11 @@ final class FeedItemCollectionViewCell: UICollectionViewCell, Reusable {
     }
     
     override func prepareForReuse() {
+        imageDownloadTask?.cancel()
         imageView.image = nil
     }
 
     func render(imageURL: URL) {
-        DispatchQueue.global().async {
-            do {
-                let data = try Data(contentsOf: imageURL)
-
-                DispatchQueue.main.async {
-                    self.imageView.image = UIImage(data: data)
-                }
-            } catch {
-                print(error)
-            }
-        }
+        imageDownloadTask = imageView.kf.setImage(with: imageURL)
     }
 }

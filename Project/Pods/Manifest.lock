@@ -1,20 +1,24 @@
 PODS:
   - Alamofire (4.9.1)
+  - Kingfisher (4.10.1)
   - SwiftGen (6.3.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.9)
+  - Kingfisher
   - SwiftGen (~> 6.0)
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Kingfisher
     - SwiftGen
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
   SwiftGen: 3d5024a47ea79e408cded20763d7a17d18a4548c
 
-PODFILE CHECKSUM: d6c3d531e3a8f385bd2fba6478d29c8dac2ed95d
+PODFILE CHECKSUM: fb9bdec02141ee722cab858a43501b058cff89d3
 
 COCOAPODS: 1.9.3
