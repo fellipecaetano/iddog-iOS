@@ -6,11 +6,9 @@ enum EmailValidation {
         case invalid
         case valid
     }
-    
-    static func validate(email: String) -> Result {
-        let trimmedEmail = email.trimmingCharacters(in: .whitespacesAndNewlines)
-        
-        guard !trimmedEmail.isEmpty else {
+
+    static func validate(email: String?) -> Result {
+        guard let trimmedEmail = email?.trimmingCharacters(in: .whitespacesAndNewlines), !trimmedEmail.isEmpty else {
             return .blank
         }
 

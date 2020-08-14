@@ -1,9 +1,9 @@
-import UIKit
 import Kingfisher
+import UIKit
 
 final class FeedItemCollectionViewCell: UICollectionViewCell, Reusable {
     private var imageDownloadTask: RetrieveImageTask?
-    
+
     private let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
@@ -44,7 +44,7 @@ final class FeedItemCollectionViewCell: UICollectionViewCell, Reusable {
             imageView.bottomAnchor.constraint(equalTo: bottomAnchor),
         ])
     }
-    
+
     override func prepareForReuse() {
         imageDownloadTask?.cancel()
         imageView.image = nil

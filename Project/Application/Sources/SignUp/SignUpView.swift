@@ -21,6 +21,12 @@ final class SignUpView: UIView {
         return button
     }()
 
+    let activityIndicatorView: UIActivityIndicatorView = {
+        let activityIndicatorView = UIActivityIndicatorView(style: .gray)
+        activityIndicatorView.hidesWhenStopped = true
+        return activityIndicatorView
+    }()
+
     init() {
         super.init(frame: UIScreen.main.bounds)
         setUp()
@@ -43,29 +49,34 @@ final class SignUpView: UIView {
     private func createHierarchy() {
         addSubview(emailTextField)
         addSubview(signUpButton)
+        addSubview(activityIndicatorView)
     }
 
     private func createConstraints() {
         // emailTextField
         emailTextField.translatesAutoresizingMaskIntoConstraints = false
 
-        NSLayoutConstraint.activate(
-            [
-                emailTextField.centerYAnchor.constraint(equalTo: centerYAnchor),
-                emailTextField.leadingAnchor.constraint(equalTo: layoutMarginsGuide.leadingAnchor),
-                emailTextField.trailingAnchor.constraint(
-                    equalTo: layoutMarginsGuide.trailingAnchor),
-            ])
+        NSLayoutConstraint.activate([
+            emailTextField.centerYAnchor.constraint(equalTo: centerYAnchor),
+            emailTextField.leadingAnchor.constraint(equalTo: layoutMarginsGuide.leadingAnchor),
+            emailTextField.trailingAnchor.constraint(
+                equalTo: layoutMarginsGuide.trailingAnchor),
+        ])
 
         // signInButton
         signUpButton.translatesAutoresizingMaskIntoConstraints = false
 
-        NSLayoutConstraint.activate(
-            [
-                signUpButton.centerXAnchor.constraint(equalTo: emailTextField.centerXAnchor),
-                signUpButton.topAnchor.constraint(
-                    equalTo: emailTextField.bottomAnchor, constant: layoutMargins.bottom * 3
-                ),
-            ])
+        NSLayoutConstraint.activate([
+            signUpButton.centerXAnchor.constraint(equalTo: emailTextField.centerXAnchor),
+            signUpButton.topAnchor.constraint(
+                equalTo: emailTextField.bottomAnchor, constant: layoutMargins.bottom * 3
+            ),
+        ])
+
+        // activityIndicatorView
+        activityIndicatorView.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+        ])
     }
 }

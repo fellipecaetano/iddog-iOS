@@ -12,21 +12,21 @@ final class FeedCollectionViewLayout: UICollectionViewFlowLayout {
     }
 
     private let itemsPerRow = 3
-    
+
     private var itemWidth: CGFloat {
         let availableWidth = UIScreen.main.bounds.width
             - CGFloat(itemsPerRow - 1) * minimumInteritemSpacing
             - sectionInset.left
             - sectionInset.right
 
-        return floor(availableWidth/CGFloat(itemsPerRow))
+        return floor(availableWidth / CGFloat(itemsPerRow))
     }
-    
+
     private var itemHeight: CGFloat {
         return itemWidth * 0.8
     }
-    
-    required init?(coder: NSCoder) {
+
+    required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }

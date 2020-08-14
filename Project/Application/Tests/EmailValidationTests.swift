@@ -1,5 +1,5 @@
-import XCTest
 @testable import iddog
+import XCTest
 
 class EmailValidationTests: XCTestCase {
     func testValidationResult() {
