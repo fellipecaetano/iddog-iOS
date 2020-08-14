@@ -6,7 +6,7 @@ public struct Reducer<State, Action, Environment> {
     public init(reduce: @escaping (inout State, Action, Environment) -> Effect<Action>) {
         self.reduce = reduce
     }
-
+    
     public func pullback<GlobalState, GlobalAction, GlobalEnvironment>(
         state toLocalState: WritableKeyPath<GlobalState, State>,
         toAction toLocalAction: @escaping (GlobalAction) -> Action?,
@@ -20,6 +20,26 @@ public struct Reducer<State, Action, Environment> {
 
             return self.reduce(
                 &globalState[keyPath: toLocalState],
+                localAction,
+                toLocalEnvironment(globalEnvironment)
+            )
+            .map(fromLocalAction)
+            .eraseToEffect()
+        }
+    }
+    
+    public func pullback<GlobalAction, GlobalEnvironment>(
+        toAction toLocalAction: @escaping (GlobalAction) -> Action?,
+        fromAction fromLocalAction: @escaping (Action) -> GlobalAction,
+        environment toLocalEnvironment: @escaping (GlobalEnvironment) -> Environment
+    ) -> Reducer<State, GlobalAction, GlobalEnvironment> {
+        return Reducer<State, GlobalAction, GlobalEnvironment> { state, globalAction, globalEnvironment in
+            guard let localAction = toLocalAction(globalAction) else {
+                return Effect.empty
+            }
+
+            return self.reduce(
+                &state,
                 localAction,
                 toLocalEnvironment(globalEnvironment)
             )

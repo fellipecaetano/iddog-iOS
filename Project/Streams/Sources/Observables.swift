@@ -29,4 +29,8 @@ public enum Observables {
             }
         }
     }
+
+    public static func empty<T>() -> AnyObservable<T> {
+        return AnyObservable { _ in Disposable.none }
+    }
 }

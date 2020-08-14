@@ -5,10 +5,12 @@ import Authentication
 struct AppState: Equatable {
     var authentication = AuthenticationState()
     var signUp = SignUpState()
+    var feed = FeedState()
 }
 
 enum AppAction: Equatable {
     case authentication(AuthenticationAction)
+    case feed(FeedAction)
     case signUp(SignUpAction)
 
     var authenticationAction: AuthenticationAction? {
@@ -16,6 +18,15 @@ enum AppAction: Equatable {
         case let .authentication(action):
             return action
         case let .signUp(.authentication(action)):
+            return action
+        default:
+            return nil
+        }
+    }
+    
+    var feedAction: FeedAction? {
+        switch self {
+        case let .feed(action):
             return action
         default:
             return nil
@@ -43,5 +54,9 @@ struct AppEnvironment {
 
     var signUpEnvironment: SignUpEnvironment {
         return SignUpEnvironment(apiClient: apiClient, authRepository: authRepository)
+    }
+
+    var feedEnvironment: FeedEnvironment {
+        return FeedEnvironment(apiClient: apiClient, log: log)
     }
 }

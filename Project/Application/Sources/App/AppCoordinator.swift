@@ -16,6 +16,11 @@ final class AppCoordinator {
                 fromAction: AppAction.authentication,
                 environment: { $0.authEnvironment }
             ),
+            feedReducer.pullback(
+                toAction: { $0.feedAction },
+                fromAction: AppAction.feed,
+                environment: { $0.feedEnvironment }
+            ),
             signUpReducer.pullback(
                 state: \AppState.signUp,
                 toAction: { $0.signUpAction },
@@ -37,6 +42,8 @@ final class AppCoordinator {
     }
 
     func start() {
+        store.emit(AppAction.authentication(.read))
+
         store
             .map { $0.authentication }
             .distinctUntilChanged()
@@ -44,35 +51,39 @@ final class AppCoordinator {
                 self?.onAuthentication(authState.authentication)
             }
             .disposed(by: disposeBag)
-        
-        store.emit(AppAction.authentication(.read))
 
         window?.makeKeyAndVisible()
     }
 
     private func onAuthentication(_ authentication: Authentication?) {
         if authentication == nil {
-            if window?.rootViewController == nil {
-                window?.rootViewController = SignUpViewController(
-                    store: store.scope(
-                        toLocalState: { $0.signUp },
-                        fromLocalAction: AppAction.signUp
+            UIView.transition(
+                with: window!,
+                duration: 0.5,
+                options: [.transitionFlipFromRight],
+                animations: {
+                    self.window?.rootViewController = SignUpViewController(
+                        store: self.store.scope(
+                            toLocalState: { $0.signUp },
+                            fromLocalAction: AppAction.signUp
+                        )
                     )
-                )
-            }
+                }
+            )
         } else {
-            if window?.rootViewController == nil {
-                window?.rootViewController = FeedViewController()
-            } else {
-                UIView.transition(
-                    with: window!,
-                    duration: 0.5,
-                    options: [.transitionFlipFromLeft],
-                    animations: {
-                        self.window?.rootViewController = FeedViewController()
-                    }
-                )
-            }
+            UIView.transition(
+                with: window!,
+                duration: 0.5,
+                options: [.transitionFlipFromLeft],
+                animations: {
+                    self.window?.rootViewController = FeedViewController(
+                        store: self.store.scope(
+                            toLocalState: { $0.feed },
+                            fromLocalAction: AppAction.feed
+                        )
+                    )
+                }
+            )
         }
     }
 }
