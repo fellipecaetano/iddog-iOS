@@ -4,11 +4,13 @@ import UIKit
 
 final class FeedViewController: UIViewController {
     private let store: AnyStore<FeedState, FeedAction>
+    private weak var delegate: FeedViewControllerDelegate?
     private let disposeBag = DisposeBag()
     private var imageURLs: [URL] = []
 
-    init(store: AnyStore<FeedState, FeedAction>) {
+    init(store: AnyStore<FeedState, FeedAction>, delegate: FeedViewControllerDelegate?) {
         self.store = store
+        self.delegate = delegate
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -23,6 +25,7 @@ final class FeedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         smartView.collectionView.dataSource = self
+        smartView.collectionView.delegate = self
         smartView.segmentedControl.addTarget(self, action: #selector(reloadCategory(sender:)), for: .valueChanged)
         bind()
         store.emit(FeedAction.load(category: .hound))
@@ -69,8 +72,18 @@ extension FeedViewController: UICollectionViewDataSource {
     }
 }
 
+extension FeedViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.feedViewController(self, didSelectImage: imageURLs[indexPath.item])
+    }
+}
+
 extension FeedViewController {
     fileprivate var smartView: FeedView! {
         return view as? FeedView
     }
+}
+
+protocol FeedViewControllerDelegate: AnyObject {
+    func feedViewController(_ feedViewController: FeedViewController, didSelectImage imageURL: URL)
 }

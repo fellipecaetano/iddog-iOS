@@ -34,6 +34,8 @@
 		A3F18ECB24E72289007ADEE2 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F18ECA24E72289007ADEE2 /* SignUpViewModel.swift */; };
 		A3F18ED524E722D0007ADEE2 /* EmailValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F18ED424E722D0007ADEE2 /* EmailValidation.swift */; };
 		A3F18EDA24E7257D007ADEE2 /* EmailValidationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F18ED924E7257D007ADEE2 /* EmailValidationTests.swift */; };
+		A3F18EDC24E73D60007ADEE2 /* FeedItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F18EDB24E73D60007ADEE2 /* FeedItemViewController.swift */; };
+		A3F18EDE24E73D79007ADEE2 /* FeedItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F18EDD24E73D79007ADEE2 /* FeedItemView.swift */; };
 		E0576717116519E922E27288 /* Pods_Application.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9100A121CF07C8907AB9B43D /* Pods_Application.framework */; };
 /* End PBXBuildFile section */
 
@@ -140,6 +142,8 @@
 		A3F18ECA24E72289007ADEE2 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		A3F18ED424E722D0007ADEE2 /* EmailValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidation.swift; sourceTree = "<group>"; };
 		A3F18ED924E7257D007ADEE2 /* EmailValidationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidationTests.swift; sourceTree = "<group>"; };
+		A3F18EDB24E73D60007ADEE2 /* FeedItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemViewController.swift; sourceTree = "<group>"; };
+		A3F18EDD24E73D79007ADEE2 /* FeedItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -296,6 +300,8 @@
 				A3C58A8224E6FFFE0076B8B5 /* FeedRedux.swift */,
 				A3C58A8424E700420076B8B5 /* FeedCategory.swift */,
 				A3F18EBA24E70C0A007ADEE2 /* FeedItemCollectionViewCell.swift */,
+				A3F18EDB24E73D60007ADEE2 /* FeedItemViewController.swift */,
+				A3F18EDD24E73D79007ADEE2 /* FeedItemView.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -596,6 +602,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A382C5BE24E1C07E009EF2F8 /* SignUpViewController.swift in Sources */,
+				A3F18EDC24E73D60007ADEE2 /* FeedItemViewController.swift in Sources */,
 				A3F18ECB24E72289007ADEE2 /* SignUpViewModel.swift in Sources */,
 				A382C5BA24E1C07E009EF2F8 /* AppDelegate.swift in Sources */,
 				A3F18ED524E722D0007ADEE2 /* EmailValidation.swift in Sources */,
@@ -609,6 +616,7 @@
 				A382C5E324E1EBE9009EF2F8 /* Strings+Generated.swift in Sources */,
 				A3C58A5F24E4A4190076B8B5 /* SignUpRedux.swift in Sources */,
 				A37C6E5C24E3A30200C7FBED /* FeedView.swift in Sources */,
+				A3F18EDE24E73D79007ADEE2 /* FeedItemView.swift in Sources */,
 				A382C5DC24E1D576009EF2F8 /* SignUpView.swift in Sources */,
 				A3F18EB524E70A4E007ADEE2 /* UIView+SafeArea.swift in Sources */,
 				A3C58A8324E6FFFE0076B8B5 /* FeedRedux.swift in Sources */,

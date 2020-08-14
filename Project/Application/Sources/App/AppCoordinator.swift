@@ -81,10 +81,18 @@ final class AppCoordinator {
                         store: self.store.scope(
                             toLocalState: { $0.feed },
                             fromLocalAction: AppAction.feed
-                        )
+                        ),
+                        delegate: self
                     )
                 }
             )
         }
+    }
+}
+
+extension AppCoordinator: FeedViewControllerDelegate {
+    func feedViewController(_ feedViewController: FeedViewController, didSelectImage imageURL: URL) {
+        let itemViewController = FeedItemViewController(imageURL: imageURL)
+        window?.rootViewController?.present(itemViewController, animated: true)
     }
 }
