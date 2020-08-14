@@ -33,6 +33,7 @@
 		A3F18EBB24E70C0A007ADEE2 /* FeedItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F18EBA24E70C0A007ADEE2 /* FeedItemCollectionViewCell.swift */; };
 		A3F18EBD24E70F38007ADEE2 /* FeedCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F18EBC24E70F38007ADEE2 /* FeedCollectionViewLayout.swift */; };
 		A3F18ECB24E72289007ADEE2 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F18ECA24E72289007ADEE2 /* SignUpViewModel.swift */; };
+		A3F18ED524E722D0007ADEE2 /* EmailValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F18ED424E722D0007ADEE2 /* EmailValidation.swift */; };
 		E0576717116519E922E27288 /* Pods_Application.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9100A121CF07C8907AB9B43D /* Pods_Application.framework */; };
 /* End PBXBuildFile section */
 
@@ -138,6 +139,7 @@
 		A3F18EBA24E70C0A007ADEE2 /* FeedItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		A3F18EBC24E70F38007ADEE2 /* FeedCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCollectionViewLayout.swift; sourceTree = "<group>"; };
 		A3F18ECA24E72289007ADEE2 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		A3F18ED424E722D0007ADEE2 /* EmailValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -321,6 +323,7 @@
 			children = (
 				A3F18EB424E70A4E007ADEE2 /* UIView+SafeArea.swift */,
 				A3F18EB624E70B00007ADEE2 /* Reusable.swift */,
+				A3F18ED424E722D0007ADEE2 /* EmailValidation.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -594,6 +597,7 @@
 				A382C5BE24E1C07E009EF2F8 /* SignUpViewController.swift in Sources */,
 				A3F18ECB24E72289007ADEE2 /* SignUpViewModel.swift in Sources */,
 				A382C5BA24E1C07E009EF2F8 /* AppDelegate.swift in Sources */,
+				A3F18ED524E722D0007ADEE2 /* EmailValidation.swift in Sources */,
 				A3F18EBD24E70F38007ADEE2 /* FeedCollectionViewLayout.swift in Sources */,
 				A3F18EBB24E70C0A007ADEE2 /* FeedItemCollectionViewCell.swift in Sources */,
 				A3C58A8124E6F9E60076B8B5 /* AppCoordinator.swift in Sources */,
