@@ -32,6 +32,7 @@
 		A3F18EB724E70B00007ADEE2 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F18EB624E70B00007ADEE2 /* Reusable.swift */; };
 		A3F18EBB24E70C0A007ADEE2 /* FeedItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F18EBA24E70C0A007ADEE2 /* FeedItemCollectionViewCell.swift */; };
 		A3F18EBD24E70F38007ADEE2 /* FeedCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F18EBC24E70F38007ADEE2 /* FeedCollectionViewLayout.swift */; };
+		A3F18ECB24E72289007ADEE2 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F18ECA24E72289007ADEE2 /* SignUpViewModel.swift */; };
 		E0576717116519E922E27288 /* Pods_Application.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9100A121CF07C8907AB9B43D /* Pods_Application.framework */; };
 /* End PBXBuildFile section */
 
@@ -136,6 +137,7 @@
 		A3F18EB624E70B00007ADEE2 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		A3F18EBA24E70C0A007ADEE2 /* FeedItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		A3F18EBC24E70F38007ADEE2 /* FeedCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCollectionViewLayout.swift; sourceTree = "<group>"; };
+		A3F18ECA24E72289007ADEE2 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,6 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				A382C5BD24E1C07E009EF2F8 /* SignUpViewController.swift */,
+				A3F18ECA24E72289007ADEE2 /* SignUpViewModel.swift */,
 				A382C5DB24E1D576009EF2F8 /* SignUpView.swift */,
 				A3C58A5E24E4A4190076B8B5 /* SignUpRedux.swift */,
 			);
@@ -589,6 +592,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A382C5BE24E1C07E009EF2F8 /* SignUpViewController.swift in Sources */,
+				A3F18ECB24E72289007ADEE2 /* SignUpViewModel.swift in Sources */,
 				A382C5BA24E1C07E009EF2F8 /* AppDelegate.swift in Sources */,
 				A3F18EBD24E70F38007ADEE2 /* FeedCollectionViewLayout.swift in Sources */,
 				A3F18EBB24E70C0A007ADEE2 /* FeedItemCollectionViewCell.swift in Sources */,
