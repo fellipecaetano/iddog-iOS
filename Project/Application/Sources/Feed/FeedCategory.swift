@@ -1,10 +1,14 @@
 import Networking
 
-enum FeedCategory: Equatable {
+enum FeedCategory: String, Equatable, CaseIterable {
     case hound
     case husky
     case pug
     case labrador
+    
+    var title: String {
+        return rawValue.capitalized
+    }
 
     var parameter: APIParameters.Category {
         switch self {

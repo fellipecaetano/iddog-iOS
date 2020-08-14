@@ -23,16 +23,23 @@ final class FeedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         smartView.collectionView.dataSource = self
+        smartView.segmentedControl.addTarget(self, action: #selector(reloadCategory(sender:)), for: .valueChanged)
         bind()
         store.emit(FeedAction.load(category: .hound))
     }
 
     private func bind() {
         store.subscribe { state in
+            self.smartView.segmentedControl.selectedSegmentIndex = FeedCategory.allCases.firstIndex(of: state.category) ?? 0
             self.imageURLs = state.images
             self.smartView.collectionView.reloadData()
         }
         .disposed(by: disposeBag)
+    }
+
+    @objc private func reloadCategory(sender segmentedControl: UISegmentedControl) {
+        let selectedCategory = FeedCategory.allCases[segmentedControl.selectedSegmentIndex]
+        store.emit(FeedAction.load(category: selectedCategory))
     }
 }
 

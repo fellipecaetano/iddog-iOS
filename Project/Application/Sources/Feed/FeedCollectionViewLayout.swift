@@ -1,13 +1,13 @@
 import UIKit
 
 final class FeedCollectionViewLayout: UICollectionViewFlowLayout {
-    override init() {
+    init(spacing: CGFloat) {
         super.init()
 
         scrollDirection = .vertical
-        minimumLineSpacing = 16
-        minimumInteritemSpacing = 16
-        sectionInset = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
+        minimumLineSpacing = spacing
+        minimumInteritemSpacing = spacing
+        sectionInset = UIEdgeInsets(top: spacing, left: spacing, bottom: spacing, right: spacing)
         itemSize = CGSize(width: itemWidth, height: itemHeight)
     }
 
