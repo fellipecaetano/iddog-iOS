@@ -34,6 +34,24 @@ extension Observable {
     }
 }
 
+extension Observable where SubscribedValue: Equatable {
+    public func distinctUntilChanged() -> AnyObservable<SubscribedValue> {
+        return AnyObservable { onComplete in
+            var lastValue: SubscribedValue?
+
+            let disposable = self.subscribe { value in
+                if value != lastValue {
+                    onComplete(value)
+                }
+
+                lastValue = value
+            }
+
+            return disposable
+        }
+    }
+}
+
 public struct AnyObservable<T>: Observable {
     private let _subscribe: (@escaping (T) -> Void) -> Disposable
 
