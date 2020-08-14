@@ -1,19 +1,19 @@
 import Authentication
 import Networking
+import Redux
 import Streams
 import UIKit
-import Redux
 
 class SignUpViewController: UIViewController {
     private let store: AnyStore<SignUpState, SignUpAction>
     private let disposeBag = DisposeBag()
-    
-    init (store: AnyStore<SignUpState, SignUpAction>) {
+
+    init(store: AnyStore<SignUpState, SignUpAction>) {
         self.store = store
         super.init(nibName: nil, bundle: nil)
     }
-    
-    required init?(coder: NSCoder) {
+
+    required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 

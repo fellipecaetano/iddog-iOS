@@ -42,7 +42,7 @@ public final class Store<State: Equatable, Action, Environment>: Observable, Obs
     ) -> AnyStore<LocalState, LocalAction> {
         return AnyStore(
             subscribe: { onComplete in
-                return self.subscribe { state in
+                self.subscribe { state in
                     onComplete(toLocalState(state))
                 }
             },

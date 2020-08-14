@@ -5,7 +5,7 @@ enum FeedCategory: Equatable {
     case husky
     case pug
     case labrador
-    
+
     var parameter: APIParameters.Category {
         switch self {
         case .hound:

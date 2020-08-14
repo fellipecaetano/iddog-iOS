@@ -6,7 +6,7 @@ public struct Reducer<State, Action, Environment> {
     public init(reduce: @escaping (inout State, Action, Environment) -> Effect<Action>) {
         self.reduce = reduce
     }
-    
+
     public func pullback<GlobalState, GlobalAction, GlobalEnvironment>(
         state toLocalState: WritableKeyPath<GlobalState, State>,
         toAction toLocalAction: @escaping (GlobalAction) -> Action?,
@@ -27,7 +27,7 @@ public struct Reducer<State, Action, Environment> {
             .eraseToEffect()
         }
     }
-    
+
     public func pullback<GlobalAction, GlobalEnvironment>(
         toAction toLocalAction: @escaping (GlobalAction) -> Action?,
         fromAction fromLocalAction: @escaping (Action) -> GlobalAction,
@@ -54,7 +54,7 @@ public struct Reducer<State, Action, Environment> {
             return Observables.merge(effects).eraseToEffect()
         }
     }
-    
+
     public func debug() -> Reducer {
         return .init { state, action, environment in
             let immutableState = state
@@ -63,9 +63,9 @@ public struct Reducer<State, Action, Environment> {
                 self.reduce(&state, action, environment),
                 Effect.fireAndForget {
                     print("Current state: \(immutableState); emitted action: \(action)")
-                }
+                },
             ])
-            .eraseToEffect()
+                .eraseToEffect()
         }
     }
 }

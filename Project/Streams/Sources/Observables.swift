@@ -15,7 +15,7 @@ public enum Observables {
             return Disposable.none
         }
     }
-    
+
     public static func merge<O: Observable>(_ observables: [O]) -> AnyObservable<O.SubscribedValue> {
         return AnyObservable { onComplete in
             let disposables = observables.map { observable in

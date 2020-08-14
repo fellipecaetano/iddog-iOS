@@ -12,7 +12,7 @@ extension Observable {
             }
         }
     }
-    
+
     public func flatMap<T>(_ fn: @escaping (SubscribedValue) -> AnyObservable<T>) -> AnyObservable<T> {
         return AnyObservable { onComplete in
             var thisDisposable: Disposable?

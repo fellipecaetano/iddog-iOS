@@ -8,7 +8,7 @@ extension UIView {
             return topAnchor
         }
     }
-    
+
     var safeBottomAnchor: NSLayoutYAxisAnchor {
         if #available(iOS 11.0, *) {
             return safeAreaLayoutGuide.bottomAnchor
@@ -16,7 +16,7 @@ extension UIView {
             return bottomAnchor
         }
     }
-    
+
     var safeLeadingAnchor: NSLayoutXAxisAnchor {
         if #available(iOS 11.0, *) {
             return safeAreaLayoutGuide.leadingAnchor

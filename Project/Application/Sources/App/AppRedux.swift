@@ -1,6 +1,6 @@
-import Redux
-import Networking
 import Authentication
+import Networking
+import Redux
 
 struct AppState: Equatable {
     var authentication = AuthenticationState()
@@ -23,7 +23,7 @@ enum AppAction: Equatable {
             return nil
         }
     }
-    
+
     var feedAction: FeedAction? {
         switch self {
         case let .feed(action):
@@ -47,7 +47,7 @@ struct AppEnvironment {
     let apiClient: APIClient
     let authRepository: AuthenticationRepository
     let log: (Any) -> Void
-    
+
     var authEnvironment: AuthenticationEnvironment {
         return AuthenticationEnvironment(repository: authRepository, log: log)
     }

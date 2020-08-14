@@ -1,12 +1,12 @@
-import UIKit
-import Redux
-import Networking
 import Authentication
+import Networking
+import Redux
 import Streams
+import UIKit
 
 final class AppCoordinator {
     private weak var window: UIWindow?
-    
+
     private let store = Store<AppState, AppAction, AppEnvironment>(
         initialState: AppState(),
         reducer: Reducer.combine(
@@ -25,7 +25,7 @@ final class AppCoordinator {
                 state: \AppState.signUp,
                 toAction: { $0.signUpAction },
                 fromAction: AppAction.signUp,
-                environment: { $0.signUpEnvironment}
+                environment: { $0.signUpEnvironment }
             )
         ).debug(),
         environment: AppEnvironment(
@@ -34,10 +34,10 @@ final class AppCoordinator {
             log: { print($0) }
         )
     )
-    
+
     private var disposeBag = DisposeBag()
 
-    init (window: UIWindow?) {
+    init(window: UIWindow?) {
         self.window = window
     }
 

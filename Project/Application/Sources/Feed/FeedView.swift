@@ -13,6 +13,7 @@ final class FeedView: UIView {
         collectionView.alwaysBounceVertical = false
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.showsVerticalScrollIndicator = false
+        collectionView.register(FeedItemCollectionViewCell.self)
         return collectionView
     }()
 
@@ -29,7 +30,7 @@ final class FeedView: UIView {
         createHierarchy()
         createConstraints()
     }
-    
+
     private func createHierarchy() {
         addSubview(collectionView)
     }
@@ -41,7 +42,7 @@ final class FeedView: UIView {
             collectionView.topAnchor.constraint(equalTo: safeTopAnchor),
             collectionView.bottomAnchor.constraint(equalTo: safeBottomAnchor),
             collectionView.leadingAnchor.constraint(equalTo: safeLeadingAnchor),
-            collectionView.trailingAnchor.constraint(equalTo: safeTrailingAnchor)
+            collectionView.trailingAnchor.constraint(equalTo: safeTrailingAnchor),
         ])
     }
 }

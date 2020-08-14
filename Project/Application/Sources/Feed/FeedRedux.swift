@@ -23,7 +23,7 @@ let feedReducer = Reducer<AppState, FeedAction, FeedEnvironment> { state, action
                 }
             }
             .eraseToEffect()
-        
+
     case let .receive(images):
         state.feed.images = images
         return Effect.empty

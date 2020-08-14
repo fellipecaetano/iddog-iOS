@@ -29,6 +29,8 @@
 		A3C58A8324E6FFFE0076B8B5 /* FeedRedux.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C58A8224E6FFFE0076B8B5 /* FeedRedux.swift */; };
 		A3C58A8524E700420076B8B5 /* FeedCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C58A8424E700420076B8B5 /* FeedCategory.swift */; };
 		A3F18EB524E70A4E007ADEE2 /* UIView+SafeArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F18EB424E70A4E007ADEE2 /* UIView+SafeArea.swift */; };
+		A3F18EB724E70B00007ADEE2 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F18EB624E70B00007ADEE2 /* Reusable.swift */; };
+		A3F18EBB24E70C0A007ADEE2 /* FeedItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F18EBA24E70C0A007ADEE2 /* FeedItemCollectionViewCell.swift */; };
 		E0576717116519E922E27288 /* Pods_Application.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9100A121CF07C8907AB9B43D /* Pods_Application.framework */; };
 /* End PBXBuildFile section */
 
@@ -130,6 +132,8 @@
 		A3C58A8224E6FFFE0076B8B5 /* FeedRedux.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedRedux.swift; sourceTree = "<group>"; };
 		A3C58A8424E700420076B8B5 /* FeedCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCategory.swift; sourceTree = "<group>"; };
 		A3F18EB424E70A4E007ADEE2 /* UIView+SafeArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+SafeArea.swift"; sourceTree = "<group>"; };
+		A3F18EB624E70B00007ADEE2 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		A3F18EBA24E70C0A007ADEE2 /* FeedItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -283,6 +287,7 @@
 				A37C6E5B24E3A30200C7FBED /* FeedView.swift */,
 				A3C58A8224E6FFFE0076B8B5 /* FeedRedux.swift */,
 				A3C58A8424E700420076B8B5 /* FeedCategory.swift */,
+				A3F18EBA24E70C0A007ADEE2 /* FeedItemCollectionViewCell.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -309,6 +314,7 @@
 			isa = PBXGroup;
 			children = (
 				A3F18EB424E70A4E007ADEE2 /* UIView+SafeArea.swift */,
+				A3F18EB624E70B00007ADEE2 /* Reusable.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -581,10 +587,12 @@
 			files = (
 				A382C5BE24E1C07E009EF2F8 /* SignUpViewController.swift in Sources */,
 				A382C5BA24E1C07E009EF2F8 /* AppDelegate.swift in Sources */,
+				A3F18EBB24E70C0A007ADEE2 /* FeedItemCollectionViewCell.swift in Sources */,
 				A3C58A8124E6F9E60076B8B5 /* AppCoordinator.swift in Sources */,
 				A3C58A7D24E59F150076B8B5 /* AuthenticationRedux.swift in Sources */,
 				A3C58A7B24E5945A0076B8B5 /* AppRedux.swift in Sources */,
 				A37C6E5A24E3A2DD00C7FBED /* FeedViewController.swift in Sources */,
+				A3F18EB724E70B00007ADEE2 /* Reusable.swift in Sources */,
 				A382C5E324E1EBE9009EF2F8 /* Strings+Generated.swift in Sources */,
 				A3C58A5F24E4A4190076B8B5 /* SignUpRedux.swift in Sources */,
 				A37C6E5C24E3A30200C7FBED /* FeedView.swift in Sources */,
