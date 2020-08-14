@@ -14,7 +14,6 @@
 		A382C5BE24E1C07E009EF2F8 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A382C5BD24E1C07E009EF2F8 /* SignUpViewController.swift */; };
 		A382C5C324E1C07F009EF2F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A382C5C224E1C07F009EF2F8 /* Assets.xcassets */; };
 		A382C5C624E1C07F009EF2F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A382C5C424E1C07F009EF2F8 /* LaunchScreen.storyboard */; };
-		A382C5D124E1C07F009EF2F8 /* ApplicationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A382C5D024E1C07F009EF2F8 /* ApplicationTests.swift */; };
 		A382C5DC24E1D576009EF2F8 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A382C5DB24E1D576009EF2F8 /* SignUpView.swift */; };
 		A382C5E024E1E961009EF2F8 /* Application.strings in Resources */ = {isa = PBXBuildFile; fileRef = A382C5DF24E1E961009EF2F8 /* Application.strings */; };
 		A382C5E324E1EBE9009EF2F8 /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = A382C5E224E1EBE8009EF2F8 /* Strings+Generated.swift */; };
@@ -34,6 +33,7 @@
 		A3F18EBD24E70F38007ADEE2 /* FeedCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F18EBC24E70F38007ADEE2 /* FeedCollectionViewLayout.swift */; };
 		A3F18ECB24E72289007ADEE2 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F18ECA24E72289007ADEE2 /* SignUpViewModel.swift */; };
 		A3F18ED524E722D0007ADEE2 /* EmailValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F18ED424E722D0007ADEE2 /* EmailValidation.swift */; };
+		A3F18EDA24E7257D007ADEE2 /* EmailValidationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F18ED924E7257D007ADEE2 /* EmailValidationTests.swift */; };
 		E0576717116519E922E27288 /* Pods_Application.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9100A121CF07C8907AB9B43D /* Pods_Application.framework */; };
 /* End PBXBuildFile section */
 
@@ -119,7 +119,6 @@
 		A382C5C524E1C07F009EF2F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A382C5C724E1C07F009EF2F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A382C5CC24E1C07F009EF2F8 /* ApplicationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ApplicationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A382C5D024E1C07F009EF2F8 /* ApplicationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationTests.swift; sourceTree = "<group>"; };
 		A382C5D224E1C07F009EF2F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A382C5DB24E1D576009EF2F8 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		A382C5DF24E1E961009EF2F8 /* Application.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Application.strings; sourceTree = "<group>"; };
@@ -140,6 +139,7 @@
 		A3F18EBC24E70F38007ADEE2 /* FeedCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCollectionViewLayout.swift; sourceTree = "<group>"; };
 		A3F18ECA24E72289007ADEE2 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		A3F18ED424E722D0007ADEE2 /* EmailValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidation.swift; sourceTree = "<group>"; };
+		A3F18ED924E7257D007ADEE2 /* EmailValidationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidationTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,8 +205,8 @@
 		A382C5CF24E1C07F009EF2F8 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				A382C5D024E1C07F009EF2F8 /* ApplicationTests.swift */,
 				A382C5D224E1C07F009EF2F8 /* Info.plist */,
+				A3F18ED924E7257D007ADEE2 /* EmailValidationTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -405,6 +405,7 @@
 					};
 					A382C5CB24E1C07F009EF2F8 = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 						TestTargetID = A382C5B524E1C07E009EF2F8;
 					};
 				};
@@ -619,7 +620,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A382C5D124E1C07F009EF2F8 /* ApplicationTests.swift in Sources */,
+				A3F18EDA24E7257D007ADEE2 /* EmailValidationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -695,7 +696,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -749,7 +750,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -807,6 +808,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8Q86GGRUX8;
 				INFOPLIST_FILE = Tests/Info.plist;
@@ -818,6 +820,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.fellipecaetano.ApplicationTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iddog.app/iddog";
@@ -830,6 +833,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8Q86GGRUX8;
 				INFOPLIST_FILE = Tests/Info.plist;
