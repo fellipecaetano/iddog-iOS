@@ -16,7 +16,7 @@ let signUpReducer = Reducer<SignUpState, SignUpAction, SignUpEnvironment> { stat
 
                     return Observables.of(
                         SignUpAction.succeed(auth: auth),
-                        SignUpAction.authentication(.authenticate(auth))
+                        SignUpAction.authentication(.set(auth))
                     )
                 case .failure:
                     return Observables.just(SignUpAction.fail)

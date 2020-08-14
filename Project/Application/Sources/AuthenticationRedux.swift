@@ -1,9 +1,26 @@
 import Authentication
 import Redux
+import Streams
 
 let authReducer = Reducer<AuthenticationState, AuthenticationAction, AuthenticationEnvironment> { state, action, environment in
     switch action {
-    case let .authenticate(authentication):
+    case .read:
+        return Effect<AuthenticationAction>.run { onComplete in
+            do {
+                let authentication = try environment.repository.get()
+                onComplete(AuthenticationAction.write(authentication))
+            } catch {
+                print(error)
+            }
+
+            return Disposable.none
+        }
+
+    case let .write(authentication):
+        state.authentication = authentication
+        return Effect.empty
+
+    case let .set(authentication):
         state.authentication = authentication
 
         return Effect.fireAndForget {
@@ -21,7 +38,9 @@ struct AuthenticationState: Equatable {
 }
 
 enum AuthenticationAction: Equatable {
-    case authenticate(Authentication)
+    case read
+    case write(Authentication)
+    case set(Authentication)
 }
 
 struct AuthenticationEnvironment {

@@ -11,20 +11,19 @@ public struct Effect<Value>: Observable {
         return observable.subscribe(handler)
     }
 
-    public static func run<T>(_ work: @escaping (@escaping (T) -> Void) -> Disposable) -> Effect<T> {
-        let observable = AnyObservable<T>(work)
-        return Effect<T>(observable: observable)
-    }
-
     public static var empty: Effect {
         return Effect.run { _ in
             Disposable.none
         }
     }
 
-    public static func fireAndForget(_ work: @escaping () -> Void) -> Effect {
+    public static func run<T>(_ work: @escaping (@escaping (T) -> Void) -> Disposable) -> Effect<T> {
+        let observable = AnyObservable<T>(work)
+        return Effect<T>(observable: observable)
+    }
+
+    public static func fireAndForget<T>(_ work: @escaping (T) -> Void) -> Effect {
         return Effect.run { _ in
-            work()
             return Disposable.none
         }
     }

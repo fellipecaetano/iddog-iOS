@@ -16,7 +16,7 @@ class SignUpViewController: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     override func loadView() {
         view = SignUpView()
     }
@@ -24,13 +24,6 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         smartView.signUpButton.addTarget(self, action: #selector(signIn), for: .touchUpInside)
-
-        do {
-            let authentication = try AuthenticationRepository.live.get()
-            smartView.emailTextField.text = authentication.email
-        } catch {
-            print(error)
-        }
     }
 
     @objc private func signIn() {
