@@ -59,8 +59,7 @@ final class SignUpView: UIView {
         NSLayoutConstraint.activate([
             emailTextField.centerYAnchor.constraint(equalTo: centerYAnchor),
             emailTextField.leadingAnchor.constraint(equalTo: layoutMarginsGuide.leadingAnchor),
-            emailTextField.trailingAnchor.constraint(
-                equalTo: layoutMarginsGuide.trailingAnchor),
+            emailTextField.trailingAnchor.constraint(equalTo: layoutMarginsGuide.trailingAnchor),
         ])
 
         // signInButton
@@ -68,15 +67,15 @@ final class SignUpView: UIView {
 
         NSLayoutConstraint.activate([
             signUpButton.centerXAnchor.constraint(equalTo: emailTextField.centerXAnchor),
-            signUpButton.topAnchor.constraint(
-                equalTo: emailTextField.bottomAnchor, constant: layoutMargins.bottom * 3
-            ),
+            signUpButton.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: layoutMargins.bottom * 3),
         ])
 
         // activityIndicatorView
         activityIndicatorView.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
+            activityIndicatorView.leadingAnchor.constraint(equalTo: signUpButton.trailingAnchor, constant: 8),
+            activityIndicatorView.centerYAnchor.constraint(equalTo: signUpButton.centerYAnchor)
         ])
     }
 }

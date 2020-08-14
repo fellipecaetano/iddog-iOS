@@ -14,4 +14,8 @@ struct SignUpViewModel {
             .map(EmailValidation.validate(email:))
             .map { $0 == .valid }
     }
+
+    var isInProgress: AnyObservable<Bool> {
+        return state.map { $0.isInProgress }
+    }
 }

@@ -43,6 +43,10 @@ class SignUpViewController: UIViewController {
         viewModel.isEnabled
             .bind(to: smartView.signUpButton.streams.isEnabled)
             .disposed(by: disposeBag)
+        
+        viewModel.isInProgress
+            .bind(to: smartView.activityIndicatorView.streams.isAnimating)
+            .disposed(by: disposeBag)
     }
 }
 

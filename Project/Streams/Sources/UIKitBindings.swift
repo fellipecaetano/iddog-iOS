@@ -33,3 +33,15 @@ extension Streams where Base: UIButton {
         }
     }
 }
+
+extension Streams where Base: UIActivityIndicatorView {
+    public var isAnimating: AnyObserver<Bool> {
+        return AnyObserver { [base] value in
+            if value {
+                base.startAnimating()
+            } else {
+                base.stopAnimating()
+            }
+        }
+    }
+}
