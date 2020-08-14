@@ -4,11 +4,13 @@ final class FeedItemCollectionViewCell: UICollectionViewCell, Reusable {
     private let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
+        imageView.clipsToBounds = true
         return imageView
     }()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
+        setUp()
     }
 
     required init?(coder _: NSCoder) {
@@ -26,16 +28,22 @@ final class FeedItemCollectionViewCell: UICollectionViewCell, Reusable {
     }
 
     private func createHierarchy() {
-        contentView.addSubview(imageView)
+        addSubview(imageView)
     }
 
     private func createConstraints() {
         imageView.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
-            imageView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
-            imageView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            imageView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            imageView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            imageView.topAnchor.constraint(equalTo: topAnchor),
+            imageView.bottomAnchor.constraint(equalTo: bottomAnchor),
         ])
+    }
+    
+    override func prepareForReuse() {
+        imageView.image = nil
     }
 
     func render(imageURL: URL) {

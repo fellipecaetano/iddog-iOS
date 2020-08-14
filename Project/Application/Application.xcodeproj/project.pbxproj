@@ -31,6 +31,7 @@
 		A3F18EB524E70A4E007ADEE2 /* UIView+SafeArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F18EB424E70A4E007ADEE2 /* UIView+SafeArea.swift */; };
 		A3F18EB724E70B00007ADEE2 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F18EB624E70B00007ADEE2 /* Reusable.swift */; };
 		A3F18EBB24E70C0A007ADEE2 /* FeedItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F18EBA24E70C0A007ADEE2 /* FeedItemCollectionViewCell.swift */; };
+		A3F18EBD24E70F38007ADEE2 /* FeedCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F18EBC24E70F38007ADEE2 /* FeedCollectionViewLayout.swift */; };
 		E0576717116519E922E27288 /* Pods_Application.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9100A121CF07C8907AB9B43D /* Pods_Application.framework */; };
 /* End PBXBuildFile section */
 
@@ -134,6 +135,7 @@
 		A3F18EB424E70A4E007ADEE2 /* UIView+SafeArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+SafeArea.swift"; sourceTree = "<group>"; };
 		A3F18EB624E70B00007ADEE2 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		A3F18EBA24E70C0A007ADEE2 /* FeedItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		A3F18EBC24E70F38007ADEE2 /* FeedCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCollectionViewLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -285,6 +287,7 @@
 			children = (
 				A37C6E5924E3A2DD00C7FBED /* FeedViewController.swift */,
 				A37C6E5B24E3A30200C7FBED /* FeedView.swift */,
+				A3F18EBC24E70F38007ADEE2 /* FeedCollectionViewLayout.swift */,
 				A3C58A8224E6FFFE0076B8B5 /* FeedRedux.swift */,
 				A3C58A8424E700420076B8B5 /* FeedCategory.swift */,
 				A3F18EBA24E70C0A007ADEE2 /* FeedItemCollectionViewCell.swift */,
@@ -587,6 +590,7 @@
 			files = (
 				A382C5BE24E1C07E009EF2F8 /* SignUpViewController.swift in Sources */,
 				A382C5BA24E1C07E009EF2F8 /* AppDelegate.swift in Sources */,
+				A3F18EBD24E70F38007ADEE2 /* FeedCollectionViewLayout.swift in Sources */,
 				A3F18EBB24E70C0A007ADEE2 /* FeedItemCollectionViewCell.swift in Sources */,
 				A3C58A8124E6F9E60076B8B5 /* AppCoordinator.swift in Sources */,
 				A3C58A7D24E59F150076B8B5 /* AuthenticationRedux.swift in Sources */,

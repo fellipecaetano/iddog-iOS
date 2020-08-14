@@ -2,13 +2,7 @@ import UIKit
 
 final class FeedView: UIView {
     let collectionView: UICollectionView = {
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .vertical
-        layout.minimumLineSpacing = 16
-        layout.minimumInteritemSpacing = 16
-        layout.itemSize = CGSize(width: 500, height: 400)
-
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: FeedCollectionViewLayout())
         collectionView.backgroundColor = .white
         collectionView.alwaysBounceVertical = false
         collectionView.showsHorizontalScrollIndicator = false

@@ -39,6 +39,7 @@ final class AppCoordinator {
 
     init(window: UIWindow?) {
         self.window = window
+        window?.backgroundColor = .white
     }
 
     func start() {
