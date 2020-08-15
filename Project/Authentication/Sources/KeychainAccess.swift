@@ -23,19 +23,35 @@ struct KeychainAccess {
         guard let data = credentials.password.data(using: .utf8) else {
             throw Error.couldNotEncodeAsData(value: credentials.password)
         }
-
-        let query: [String: Any] = [
+        
+        let queryToUpdate: [String: Any] = [
             kSecClass as String: kSecClassInternetPassword,
-            kSecAttrServer as String: server,
-            kSecAttrAccount as String: credentials.account,
-            kSecAttrAccessible as String: kSecAttrAccessibleWhenUnlocked,
-            kSecValueData as String: data,
+            kSecAttrServer as String: server
         ]
+        
+        let attributesToUpdate: [String: Any] = [
+            kSecAttrAccount as String: credentials.account,
+            kSecValueData as String: data
+        ]
+        
+        let statusAfterUpdate = SecItemUpdate(queryToUpdate as CFDictionary, attributesToUpdate as CFDictionary)
+        
+        if statusAfterUpdate == errSecItemNotFound {
+            let queryToAdd: [String: Any] = [
+                kSecClass as String: kSecClassInternetPassword,
+                kSecAttrServer as String: server,
+                kSecAttrAccount as String: credentials.account,
+                kSecAttrAccessible as String: kSecAttrAccessibleWhenUnlocked,
+                kSecValueData as String: data,
+            ]
 
-        let status = SecItemAdd(query as CFDictionary, nil)
+            let statusAfterAdd = SecItemAdd(queryToAdd as CFDictionary, nil)
 
-        guard status == errSecSuccess else {
-            throw Error.unhandledError(status: status)
+            guard statusAfterAdd == errSecSuccess else {
+                throw Error.unhandledError(status: statusAfterAdd)
+            }
+        } else if statusAfterUpdate != errSecSuccess {
+            throw Error.unhandledError(status: statusAfterUpdate)
         }
     }
 
