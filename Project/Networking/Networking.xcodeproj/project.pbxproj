@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		92A6ECFA6BA0D7EC7739965F /* Pods_Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C909F56DF66102F9ED52F11B /* Pods_Networking.framework */; };
 		A382C67624E31605009EF2F8 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A382C66C24E31604009EF2F8 /* Networking.framework */; };
-		A382C67B24E31605009EF2F8 /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A382C67A24E31605009EF2F8 /* NetworkingTests.swift */; };
 		A382C67D24E31605009EF2F8 /* Networking.h in Headers */ = {isa = PBXBuildFile; fileRef = A382C66F24E31604009EF2F8 /* Networking.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A382C68724E31713009EF2F8 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A382C68624E31713009EF2F8 /* APIClient.swift */; };
 		A382C68924E31755009EF2F8 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A382C68824E31755009EF2F8 /* APIError.swift */; };
@@ -51,7 +50,6 @@
 		A382C66F24E31604009EF2F8 /* Networking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
 		A382C67024E31604009EF2F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A382C67524E31605009EF2F8 /* NetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A382C67A24E31605009EF2F8 /* NetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTests.swift; sourceTree = "<group>"; };
 		A382C67C24E31605009EF2F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A382C68624E31713009EF2F8 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		A382C68824E31755009EF2F8 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
@@ -133,7 +131,6 @@
 		A382C67924E31605009EF2F8 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				A382C67A24E31605009EF2F8 /* NetworkingTests.swift */,
 				A382C67C24E31605009EF2F8 /* Info.plist */,
 			);
 			path = Tests;
@@ -336,7 +333,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A382C67B24E31605009EF2F8 /* NetworkingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
