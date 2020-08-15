@@ -69,4 +69,17 @@ struct KeychainAccess {
 
         return Credentials(account: account, password: password)
     }
+    
+    func delete() throws {
+        let query: [String: Any] = [
+            kSecClass as String: kSecClassInternetPassword,
+            kSecAttrServer as String: server
+        ]
+
+        let status = SecItemDelete(query as CFDictionary)
+
+        guard status == errSecSuccess || status == errSecItemNotFound else {
+            throw Error.unhandledError(status: status)
+        }
+    }
 }

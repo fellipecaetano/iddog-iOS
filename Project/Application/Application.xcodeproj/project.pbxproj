@@ -36,6 +36,7 @@
 		A3F18EDA24E7257D007ADEE2 /* EmailValidationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F18ED924E7257D007ADEE2 /* EmailValidationTests.swift */; };
 		A3F18EDC24E73D60007ADEE2 /* FeedItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F18EDB24E73D60007ADEE2 /* FeedItemViewController.swift */; };
 		A3F18EDE24E73D79007ADEE2 /* FeedItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F18EDD24E73D79007ADEE2 /* FeedItemView.swift */; };
+		A3F18EE624E8462A007ADEE2 /* KeychainAccessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F18EE524E8462A007ADEE2 /* KeychainAccessTests.swift */; };
 		E0576717116519E922E27288 /* Pods_Application.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9100A121CF07C8907AB9B43D /* Pods_Application.framework */; };
 /* End PBXBuildFile section */
 
@@ -144,6 +145,7 @@
 		A3F18ED924E7257D007ADEE2 /* EmailValidationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidationTests.swift; sourceTree = "<group>"; };
 		A3F18EDB24E73D60007ADEE2 /* FeedItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemViewController.swift; sourceTree = "<group>"; };
 		A3F18EDD24E73D79007ADEE2 /* FeedItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemView.swift; sourceTree = "<group>"; };
+		A3F18EE524E8462A007ADEE2 /* KeychainAccessTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainAccessTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +213,7 @@
 			children = (
 				A382C5D224E1C07F009EF2F8 /* Info.plist */,
 				A3F18ED924E7257D007ADEE2 /* EmailValidationTests.swift */,
+				A3F18EE524E8462A007ADEE2 /* KeychainAccessTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -629,6 +632,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3F18EDA24E7257D007ADEE2 /* EmailValidationTests.swift in Sources */,
+				A3F18EE624E8462A007ADEE2 /* KeychainAccessTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
