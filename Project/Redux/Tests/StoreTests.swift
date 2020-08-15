@@ -4,12 +4,12 @@ import XCTest
 @testable import Redux
 
 class StoreTests: XCTestCase {
-    private var store: Store<Int, StoreTestsAction>!
+    private var store: Store<Int, StoreTestsAction, Void>!
 
     override func setUp() {
-        store = Store<Int, StoreTestsAction>(
+        store = Store<Int, StoreTestsAction, Void>(
             initialState: 0,
-            reducer: Reducer { state, action in
+            reducer: Reducer { state, action, _ in
                 switch action {
                 case .increment:
                     state = state + 1
@@ -27,7 +27,8 @@ class StoreTests: XCTestCase {
                 }
 
                 return Effect.empty
-            }
+            },
+            environment: ()
         )
     }
 

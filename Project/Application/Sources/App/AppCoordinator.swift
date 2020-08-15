@@ -34,6 +34,8 @@ final class AppCoordinator {
             log: { print($0) }
         )
     )
+    
+    private let tabBarController = UITabBarController()
 
     private var disposeBag = DisposeBag()
 
@@ -52,6 +54,17 @@ final class AppCoordinator {
                 self?.onAuthentication(authState.authentication)
             }
             .disposed(by: disposeBag)
+        
+        tabBarController.viewControllers = [
+            FeedViewController(
+                store: self.store.scope(
+                    toLocalState: { $0.feed },
+                    fromLocalAction: AppAction.feed
+                ),
+                delegate: self
+            ),
+            ProfileViewController()
+        ]
 
         window?.makeKeyAndVisible()
     }
@@ -77,13 +90,7 @@ final class AppCoordinator {
                 duration: 0.5,
                 options: [.transitionFlipFromLeft],
                 animations: {
-                    self.window?.rootViewController = FeedViewController(
-                        store: self.store.scope(
-                            toLocalState: { $0.feed },
-                            fromLocalAction: AppAction.feed
-                        ),
-                        delegate: self
-                    )
+                    self.window?.rootViewController = self.tabBarController
                 }
             )
         }

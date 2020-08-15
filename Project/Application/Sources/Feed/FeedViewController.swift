@@ -12,6 +12,8 @@ final class FeedViewController: UIViewController {
         self.store = store
         self.delegate = delegate
         super.init(nibName: nil, bundle: nil)
+        tabBarItem = UITabBarItem(title: L10n.feed, image: Asset.feedTabBarIcon.image, selectedImage: Asset.feedTabBarIcon.image)
+        title = L10n.feed
     }
 
     required init?(coder _: NSCoder) {
