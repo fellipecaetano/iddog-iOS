@@ -75,7 +75,7 @@ final class SignUpView: UIView {
 
         NSLayoutConstraint.activate([
             activityIndicatorView.leadingAnchor.constraint(equalTo: signUpButton.trailingAnchor, constant: 8),
-            activityIndicatorView.centerYAnchor.constraint(equalTo: signUpButton.centerYAnchor)
+            activityIndicatorView.centerYAnchor.constraint(equalTo: signUpButton.centerYAnchor),
         ])
     }
 }

@@ -59,13 +59,15 @@ public struct Reducer<State, Action, Environment> {
         return .init { state, action, environment in
             let immutableState = state
 
-            return Observables.merge([
-                self.reduce(&state, action, environment),
-                Effect.fireAndForget {
-                    print("Current state: \(immutableState); emitted action: \(action)")
-                },
-            ])
-                .eraseToEffect()
+            return Observables.merge(
+                [
+                    self.reduce(&state, action, environment),
+                    Effect.fireAndForget {
+                        print("Current state: \(immutableState); emitted action: \(action)")
+                    },
+                ]
+            )
+            .eraseToEffect()
         }
     }
 }

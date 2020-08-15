@@ -38,7 +38,7 @@ final class FeedViewController: UIViewController {
             self.smartView.collectionView.reloadData()
         }
         .disposed(by: disposeBag)
-        
+
         store
             .map { $0.isLoading }
             .bind(to: smartView.activityIndicatorView.streams.isAnimating)
@@ -73,7 +73,7 @@ extension FeedViewController: UICollectionViewDataSource {
 }
 
 extension FeedViewController: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    func collectionView(_: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         delegate?.feedViewController(self, didSelectImage: imageURLs[indexPath.item])
     }
 }

@@ -91,7 +91,7 @@ final class AppCoordinator {
 }
 
 extension AppCoordinator: FeedViewControllerDelegate {
-    func feedViewController(_ feedViewController: FeedViewController, didSelectImage imageURL: URL) {
+    func feedViewController(_: FeedViewController, didSelectImage imageURL: URL) {
         let itemViewController = FeedItemViewController(imageURL: imageURL)
         window?.rootViewController?.present(itemViewController, animated: true)
     }

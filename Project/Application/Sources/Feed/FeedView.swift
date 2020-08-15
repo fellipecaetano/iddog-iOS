@@ -47,7 +47,7 @@ final class FeedView: UIView {
         NSLayoutConstraint.activate([
             segmentedControl.topAnchor.constraint(equalTo: safeAreaAnchors.top),
             segmentedControl.leadingAnchor.constraint(equalTo: safeAreaAnchors.leading, constant: layoutMargins.left * 2),
-            segmentedControl.trailingAnchor.constraint(equalTo: safeAreaAnchors.trailing, constant: -layoutMargins.right * 2)
+            segmentedControl.trailingAnchor.constraint(equalTo: safeAreaAnchors.trailing, constant: -layoutMargins.right * 2),
         ])
 
         // collectionView
@@ -65,7 +65,7 @@ final class FeedView: UIView {
 
         NSLayoutConstraint.activate([
             activityIndicatorView.centerXAnchor.constraint(equalTo: safeAreaAnchors.centerX),
-            activityIndicatorView.centerYAnchor.constraint(equalTo: safeAreaAnchors.centerY)
+            activityIndicatorView.centerYAnchor.constraint(equalTo: safeAreaAnchors.centerY),
         ])
     }
 }

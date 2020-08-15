@@ -18,6 +18,8 @@
 		A382C6B424E34070009EF2F8 /* DisposeBagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A382C6B324E34070009EF2F8 /* DisposeBagTests.swift */; };
 		A3C58A7F24E5AA280076B8B5 /* Observables.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C58A7E24E5AA280076B8B5 /* Observables.swift */; };
 		A3F18EC924E7206F007ADEE2 /* UIKitBindings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F18EC824E7206F007ADEE2 /* UIKitBindings.swift */; };
+		A3F18EE024E842EB007ADEE2 /* ObservableOperatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F18EDF24E842EB007ADEE2 /* ObservableOperatorsTests.swift */; };
+		A3F18EE224E84359007ADEE2 /* TestObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F18EE124E84359007ADEE2 /* TestObserver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		A382C6B324E34070009EF2F8 /* DisposeBagTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisposeBagTests.swift; sourceTree = "<group>"; };
 		A3C58A7E24E5AA280076B8B5 /* Observables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observables.swift; sourceTree = "<group>"; };
 		A3F18EC824E7206F007ADEE2 /* UIKitBindings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitBindings.swift; sourceTree = "<group>"; };
+		A3F18EDF24E842EB007ADEE2 /* ObservableOperatorsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableOperatorsTests.swift; sourceTree = "<group>"; };
+		A3F18EE124E84359007ADEE2 /* TestObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestObserver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,7 @@
 				A3C58A7E24E5AA280076B8B5 /* Observables.swift */,
 				A382C61124E23F01009EF2F8 /* Observer.swift */,
 				A3F18EC824E7206F007ADEE2 /* UIKitBindings.swift */,
+				A3F18EE124E84359007ADEE2 /* TestObserver.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -106,6 +111,7 @@
 				A382C5FE24E2394A009EF2F8 /* Info.plist */,
 				A382C60A24E23AF5009EF2F8 /* SubjectTests.swift */,
 				A382C6B324E34070009EF2F8 /* DisposeBagTests.swift */,
+				A3F18EDF24E842EB007ADEE2 /* ObservableOperatorsTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -225,6 +231,7 @@
 				A3C58A7F24E5AA280076B8B5 /* Observables.swift in Sources */,
 				A382C61024E23CDE009EF2F8 /* Observable.swift in Sources */,
 				A382C6B224E34001009EF2F8 /* DisposeBag.swift in Sources */,
+				A3F18EE224E84359007ADEE2 /* TestObserver.swift in Sources */,
 				A382C60E24E23C04009EF2F8 /* Disposable.swift in Sources */,
 				A3F18EC924E7206F007ADEE2 /* UIKitBindings.swift in Sources */,
 			);
@@ -234,6 +241,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3F18EE024E842EB007ADEE2 /* ObservableOperatorsTests.swift in Sources */,
 				A382C6B424E34070009EF2F8 /* DisposeBagTests.swift in Sources */,
 				A382C60C24E23B38009EF2F8 /* SubjectTests.swift in Sources */,
 			);

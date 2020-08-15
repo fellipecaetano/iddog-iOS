@@ -12,25 +12,25 @@ final class FeedItemView: UIView {
         super.init(frame: UIScreen.main.bounds)
         setUp()
     }
-    
-    required init?(coder: NSCoder) {
+
+    required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     private func setUp() {
         configure()
         createHierarchy()
         createConstraints()
     }
-    
+
     private func configure() {
         backgroundColor = .black
     }
-    
+
     private func createHierarchy() {
         addSubview(imageView)
     }
-    
+
     private func createConstraints() {
         imageView.translatesAutoresizingMaskIntoConstraints = false
 
@@ -38,7 +38,7 @@ final class FeedItemView: UIView {
             imageView.leadingAnchor.constraint(equalTo: safeAreaAnchors.leading),
             imageView.trailingAnchor.constraint(equalTo: safeAreaAnchors.trailing),
             imageView.topAnchor.constraint(equalTo: safeAreaAnchors.top),
-            imageView.bottomAnchor.constraint(equalTo: safeAreaAnchors.bottom)
+            imageView.bottomAnchor.constraint(equalTo: safeAreaAnchors.bottom),
         ])
     }
 }

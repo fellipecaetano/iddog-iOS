@@ -5,7 +5,7 @@ enum FeedCategory: String, Equatable, CaseIterable {
     case husky
     case pug
     case labrador
-    
+
     var title: String {
         return rawValue.capitalized
     }
