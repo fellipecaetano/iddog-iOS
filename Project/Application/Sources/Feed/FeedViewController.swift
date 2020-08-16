@@ -54,6 +54,8 @@ final class FeedViewController: UIViewController {
     }
 
     @objc private func reloadCategory(sender segmentedControl: UISegmentedControl) {
+        self.smartView.collectionView.contentOffset = .zero
+
         let selectedCategory = FeedCategory.allCases[segmentedControl.selectedSegmentIndex]
         store.emit(FeedAction.load(category: selectedCategory))
     }

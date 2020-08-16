@@ -27,7 +27,7 @@ final class AppCoordinator {
                 fromAction: AppAction.signUp,
                 environment: { $0.signUpEnvironment }
             )
-        ).debug(),
+        ),
         environment: AppEnvironment(
             apiClient: APIClient.live,
             authRepository: AuthenticationRepository.live,
@@ -35,9 +35,9 @@ final class AppCoordinator {
         )
     )
 
-    private let tabBarController = UITabBarController()
-
     private var disposeBag = DisposeBag()
+    
+    private let tabBarController = UITabBarController()
 
     init(window: UIWindow?) {
         self.window = window
@@ -54,22 +54,6 @@ final class AppCoordinator {
                 self?.onAuthentication(authState.authentication)
             }
             .disposed(by: disposeBag)
-
-        tabBarController.viewControllers = [
-            FeedViewController(
-                store: store.scope(
-                    toLocalState: { $0.feed },
-                    fromLocalAction: AppAction.feed
-                ),
-                delegate: self
-            ),
-            ProfileViewController(
-                store: store.scope(
-                    toLocalState: { $0.authentication },
-                    fromLocalAction: AppAction.authentication
-                )
-            ),
-        ]
 
         window?.makeKeyAndVisible()
     }
@@ -90,6 +74,24 @@ final class AppCoordinator {
                 }
             )
         } else {
+            tabBarController.viewControllers = [
+                FeedViewController(
+                    store: store.scope(
+                        toLocalState: { $0.feed },
+                        fromLocalAction: AppAction.feed
+                    ),
+                    delegate: self
+                ),
+                ProfileViewController(
+                    store: store.scope(
+                        toLocalState: { $0.authentication },
+                        fromLocalAction: AppAction.authentication
+                    )
+                ),
+            ]
+            
+            tabBarController.selectedIndex = 0
+
             UIView.transition(
                 with: window!,
                 duration: 0.5,
