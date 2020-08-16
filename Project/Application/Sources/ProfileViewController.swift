@@ -3,7 +3,7 @@ import UIKit
 final class ProfileViewController: UIViewController {
     init() {
         super.init(nibName: nil, bundle: nil)
-        tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 1)
+        tabBarItem = UITabBarItem(title: L10n.profile, image: Asset.profileTabBarIcon.image, selectedImage: Asset.profileTabBarIcon.image)
         title = L10n.profile
     }
 
@@ -13,6 +13,5 @@ final class ProfileViewController: UIViewController {
     
     override func loadView() {
         view = UIView(frame: UIScreen.main.bounds)
-        view.backgroundColor = .red
     }
 }
