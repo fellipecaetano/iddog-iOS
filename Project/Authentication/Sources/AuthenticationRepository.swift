@@ -8,6 +8,7 @@ public struct AuthenticationRepository {
 
     public let get: () throws -> Authentication
     public let put: (Authentication) throws -> Void
+    public let delete: () throws -> Void
 
     public static let live = AuthenticationRepository(
         get: {
@@ -28,6 +29,13 @@ public struct AuthenticationRepository {
 
             do {
                 try keychain.put(credentials: credentials)
+            } catch {
+                throw Error.unhandledError(error)
+            }
+        },
+        delete: {
+            do {
+                try keychain.delete()
             } catch {
                 throw Error.unhandledError(error)
             }

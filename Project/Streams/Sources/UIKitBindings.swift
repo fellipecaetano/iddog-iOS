@@ -34,6 +34,14 @@ extension Streams where Base: UIButton {
     }
 }
 
+extension Streams where Base: UILabel {
+    public var text: AnyObserver<String?> {
+        return AnyObserver { [base] value in
+            base.text = value
+        }
+    }
+}
+
 extension Streams where Base: UIActivityIndicatorView {
     public var isAnimating: AnyObserver<Bool> {
         return AnyObserver { [base] value in

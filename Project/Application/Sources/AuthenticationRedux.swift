@@ -30,7 +30,19 @@ let authReducer = Reducer<AuthenticationState, AuthenticationAction, Authenticat
                 environment.log(error)
             }
         }
+        
+    case .signOut:
+        state.authentication = nil
+        
+        return Effect.fireAndForget {
+            do {
+                try environment.repository.delete()
+            } catch {
+                environment.log(error)
+            }
+        }
     }
+    
 }
 
 struct AuthenticationState: Equatable {
@@ -41,6 +53,7 @@ enum AuthenticationAction: Equatable {
     case read
     case write(Authentication)
     case set(Authentication)
+    case signOut
 }
 
 struct AuthenticationEnvironment {

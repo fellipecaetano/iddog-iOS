@@ -25,8 +25,6 @@ class SignUpViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        smartView.signUpButton.addTarget(self, action: #selector(signIn), for: .touchUpInside)
-        smartView.emailTextField.addTarget(self, action: #selector(updateEmail(sender:)), for: .editingChanged)
         bind()
     }
 
@@ -40,6 +38,9 @@ class SignUpViewController: UIViewController {
     }
 
     private func bind() {
+        smartView.signUpButton.addTarget(self, action: #selector(signIn), for: .touchUpInside)
+        smartView.emailTextField.addTarget(self, action: #selector(updateEmail(sender:)), for: .editingChanged)
+
         viewModel.isEnabled
             .bind(to: smartView.signUpButton.streams.isEnabled)
             .disposed(by: disposeBag)

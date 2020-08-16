@@ -16,6 +16,8 @@ internal enum L10n {
   internal static let feed = L10n.tr("Application", "feed")
   /// Perfil
   internal static let profile = L10n.tr("Application", "profile")
+  /// Sair
+  internal static let signOut = L10n.tr("Application", "sign_out")
   /// Entrar
   internal static let signUp = L10n.tr("Application", "sign_up")
 }

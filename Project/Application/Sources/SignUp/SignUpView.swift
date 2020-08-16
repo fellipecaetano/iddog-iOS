@@ -57,12 +57,12 @@ final class SignUpView: UIView {
         emailTextField.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
-            emailTextField.centerYAnchor.constraint(equalTo: centerYAnchor),
+            emailTextField.centerYAnchor.constraint(equalTo: safeAreaAnchors.centerY),
             emailTextField.leadingAnchor.constraint(equalTo: layoutMarginsGuide.leadingAnchor),
             emailTextField.trailingAnchor.constraint(equalTo: layoutMarginsGuide.trailingAnchor),
         ])
 
-        // signInButton
+        // signUpButton
         signUpButton.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([

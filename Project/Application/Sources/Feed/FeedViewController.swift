@@ -28,12 +28,13 @@ final class FeedViewController: UIViewController {
         super.viewDidLoad()
         smartView.collectionView.dataSource = self
         smartView.collectionView.delegate = self
-        smartView.segmentedControl.addTarget(self, action: #selector(reloadCategory(sender:)), for: .valueChanged)
         bind()
         store.emit(FeedAction.load(category: .hound))
     }
 
     private func bind() {
+        smartView.segmentedControl.addTarget(self, action: #selector(reloadCategory(sender:)), for: .valueChanged)
+
         store.subscribe { state in
             self.smartView.segmentedControl.selectedSegmentIndex = FeedCategory.allCases.firstIndex(of: state.category) ?? 0
             self.imageURLs = state.images
