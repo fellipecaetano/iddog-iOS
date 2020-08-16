@@ -4,16 +4,14 @@ Este repositório abriga uma implementação iOS do [iddog](https://github.com/i
 
 ## Índice
 
-- [iddog-iOS](#iddog-iOS)
-  - [Índice](#%C3%8Dndice)
-  - [Estrutura do projeto](#Estrutura-do-projeto)
-  - [Arquitetura](#Arquitetura)
-  - [Dependencências de terceiros](#Dependenc%C3%AAncias-de-terceiros)
-  - [Trade-offs](#Trade-offs)
-    - [UI](#UI)
-    - [Testes](#Testes)
-  - [Stack](#Stack)
-  - [Referências](#Refer%C3%AAncias)
+- [Estrutura do projeto](#Estrutura-do-projeto)
+- [Arquitetura](#Arquitetura)
+- [Dependencências de terceiros](#Dependenc%C3%AAncias-de-terceiros)
+- [Trade-offs](#Trade-offs)
+  - [UI](#UI)
+  - [Testes](#Testes)
+- [Stack](#Stack)
+- [Referências](#Refer%C3%AAncias)
 
 ## Estrutura do projeto
 
